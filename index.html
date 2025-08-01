@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack H. Roberts - Data Science Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#welcome" onclick="scrollToSection('welcome')">Welcome</a></li>
+                <li><a href="#timeline" onclick="scrollToSection('timeline')">Timeline</a></li>
+                <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
+                <li><a href="#game" onclick="scrollToSection('game')">Game</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section id="welcome">
+        <div class="hero-content">
+            <h1>Hey,<br> I'm Jack.</h1>
+            <div class="hero-image">
+                <img src="images/headshot.jpg" alt="Jack's headshot" />
+            </div>
+            <p><!-- Add your intro text here --></p>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section-alt">
+        <h2>Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3><!-- Graduation / Most Recent --></h3>
+                <p><!-- Add content here --></p>
+            </div>
+            <div class="timeline-item">
+                <h3><!-- Previous Experience --></h3>
+                <p><!-- Add content here --></p>
+            </div>
+            <div class="timeline-item">
+                <h3><!-- Earlier Experience --></h3>
+                <p><!-- Add content here --></p>
+            </div>
+            <!-- Add more timeline items as needed -->
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" onclick="window.location.href='projects/FurmanEngaged2025.html'">
+                <div class="project-image"><img src="images/projects/FurmanEngaged2025.png" alt="Furman Engaged 2025 Image" /></div>
+                <h3>Furman Engaged 2025</h3>
+                <p>Disney research presented to Furman campus in April 2025.</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='projects/FurmanEngaged2024.html'">
+                <div class="project-image"><img src="images/projects/FurmanEngaged2024.png" alt="Furman Engaged 2024 Image" /></div>
+                <h3>Furman Engaged 2024</h3>
+                <p>Maternal Health Risk Prediction project presented to Furman campus in April 2024.</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='projects/MaternalHealthRiskPrediction.html'">
+                <div class="project-image"><img src="images/projects/MaternalHealthRiskPrediction.png" alt="Maternal Health Risk Prediction Image" /></div>
+                <h3>Maternal Health Risk Prediction</h3>
+                <p>Semester-long analytics project from <i>Statistics in R I</i> presented in December 2023.</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='projects/ChessMatchAnalysis.html'">
+                <div class="project-image"><img src="images/projects/ChessMatchAnalysis.png" alt="Chess Match Analysis Image" /></div>
+                <h3>Chess Match Analysis</h3>
+                <p>Personal analytics project to learn more about the factors that affect my chess win percentage.</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='projects/DataFest2025.html'">
+                <div class="project-image"><img src="images/projects/DataFest2025.png" alt="DataFest 2025 Image" /></div>
+                <h3>DataFest 2025</h3>
+                <p>Data analytics competition against Furman students in April 2025.</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='projects/DataFest2024.html'">
+                <div class="project-image"><img src="images/projects/DataFest2024.png" alt="DataFest 2024 Image" /></div>
+                <h3>DataFest 2024</h3>
+                <p>Data analytics competition against Furman students in November 2024.</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='projects/DataMania2024.html'">
+                <div class="project-image"><img src="images/projects/DataMania2024.png" alt="Data Mania 2024 Image" /></div>
+                <h3>DataMania 2024</h3>
+                <p>Data analytics competition against Wake Forest and Furman students in April 2024.</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='projects/GreenvilleSpotlight.html'">
+                <div class="project-image"><img src="images/projects/GreenvilleSpotlight.png" alt="Greenville Spotlight Image" /></div>
+                <h3>Greenville Spotlight</h3>
+                <p>Semester-long web development project from <i>Web Design & Development</i> presented in December 2024.</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='projects/TargetSWOT.html'">
+                <div class="project-image"><img src="images/projects/TargetSWOT.png" alt="Target SWOT Image" /></div>
+                <h3>Target S.W.O.T. Analysis</h3>
+                <p>Final project from <i>Marketing Strategy</i> analyzing the strengths, weaknesses, opportunities, and threats (SWOT) of Target.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Section -->
+    <section id="game" class="section-alt">
+        <h2>Get to Know Me</h2>
+        <div class="game-container">
+            <div class="game-question" id="question-text">
+                Does Jack prefer waffles or pancakes?
+            </div>
+            <div class="game-options" id="game-options">
+                <button class="game-button" onclick="answerQuestion('Waffles')">Waffles</button>
+                <button class="game-button" onclick="answerQuestion('Pancakes')">Pancakes</button>
+            </div>
+            <div id="game-result">
+                <!-- Answer will appear here -->
+            </div>
+            <div class="game-progress">
+                <span id="question-counter">Question 1 of 10</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Let's Chat</h2>
+        <div class="contact-links">
+            <a style="font-size: 30px;" href="mailto:jackhroberts02@gmail.com" class="contact-link">Email</a>
+            <a style="font-size: 30px;" href="https://linkedin.com/in/jack-h-roberts/" class="contact-link" target="_blank">LinkedIn</a>
+            <a style="font-size: 30px;" href="https://github.com/Jack-H-Roberts" class="contact-link" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Jack H. Roberts. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
