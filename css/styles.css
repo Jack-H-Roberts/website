@@ -12,6 +12,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--primary-grey);
@@ -57,6 +66,10 @@ section {
 
 .section-alt {
     background-color: var(--dark-grey);
+}
+
+.main {
+    min-height: 85vh;
 }
 
 h1 {
@@ -112,14 +125,6 @@ h2 {
     width: 2px;
     background-color: var(--accent-purple);
     transform: translateX(-50%);
-}
-
-.timeline-item {
-    background-color: var(--primary-grey);
-    margin: 2rem 0;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--accent-purple);
 }
 
 /* Projects grid */
@@ -286,7 +291,83 @@ footer {
     }
 
     .timeline-item {
-        margin-left: 2rem;
+        background-color: var(--primary-grey);
+        margin: 2rem 0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-purple);
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .timeline-content {
+        flex: 1;
+    }
+
+    .timeline-date {
+        color: var(--accent-purple);
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-white);
+    }
+
+    .timeline-description {
+        color: var(--text-grey);
+        line-height: 1.5;
+    }
+
+    .timeline-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+        background-color: var(--dark-grey);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 2px solid var(--accent-purple);
+    }
+
+    .timeline-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    /* Timeline dot indicator */
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 1.5rem;
+        width: 12px;
+        height: 12px;
+        background-color: var(--accent-purple);
+        border-radius: 50%;
+        border: 3px solid var(--primary-grey);
+    }
+
+    /* Mobile responsive timeline */
+    @media (max-width: 768px) {
+        .timeline-item {
+            flex-direction: column;
+            margin-left: 2rem;
+        }
+        
+        .timeline-image {
+            align-self: flex-start;
+            width: 60px;
+            height: 60px;
+        }
     }
 
     .game-options {
