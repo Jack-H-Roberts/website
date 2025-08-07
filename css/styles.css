@@ -568,6 +568,10 @@ footer {
         font-size: 1.8rem;
     }
 
+    header {
+        opacity: 0;
+    }
+
     .game-options {
         flex-direction: column;
         align-items: center;
