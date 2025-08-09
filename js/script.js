@@ -11,37 +11,37 @@ const gameQuestions = [
         question: "Does Jack prefer waffles or pancakes?",
         options: ["Waffles", "Pancakes"],
         answer: "Waffles",
-        explanation: "Jack prefers the crispiness of waffles to the fluffiness of pancakes."
+        explanation: "I prefer the crispiness of waffles to the fluffiness of pancakes."
     },
     {
         question: "If Jack could only eat one cuisine forever, what would it be?",
         options: ["Italian", "Mexican", "Chinese", "Indian"],
         answer: "Mexican",
-        explanation: "Too many of Jack's favorite foods are Mexican, like fajitas and quesadillas."
+        explanation: "Too many of my favorite foods are Mexican, like fajitas and quesadillas."
     },
     {
         question: "Vacation to the lake or to the beach?",
         options: ["Lake", "Beach"],
         answer: "Lake",
-        explanation: "Jack loves jet skiing and tubing at the lake, as well as the peacefulness of the water."
+        explanation: "I love jet skiing and tubing at the lake, as well as the peacefulness of the water."
     },
     {
         question: "What's Jack's secret talent?",
         options: ["Chess", "Pottery", "Golf", "Robotics"],
         answer: "Chess",
-        explanation: "Jack has played chess for years and is in the top 0.5% of players worldwide."
+        explanation: "I have played chess for years and am in the top 0.5% of players worldwide."
     },
     {
         question: "What was Jack's first programming language?",
         options: ["Python", "Java", "C++", "JavaScript"],
         answer: "Java",
-        explanation: "Jack started with object-oriented programming in Java in high school."
+        explanation: "I started with object-oriented programming in Java in high school."
     },
     {
         question: "What language did Jack study in college?",
         options: ["Spanish", "Japanese", "German", "French"],
         answer: "Japanese",
-        explanation: "Jack studied Japanese for four semesters and nearly completed his Asian Studies major."
+        explanation: "I studied Japanese for four semesters and nearly completed an Asian Studies major."
     },
     {
         question: "Jack's coding style preference: camelCase or snake_case?",
@@ -53,19 +53,19 @@ const gameQuestions = [
         question: "The eternal debate - tabs or spaces?",
         options: ["Tabs", "Spaces"],
         answer: "Tabs",
-        explanation: "Tabs are more flexible and easier to manage, making them Jack's choice."
+        explanation: "Tabs are more flexible and easier to manage, making them my prefered choice."
     },
     {
         question: "What's Jack's go-to data visualization tool?",
         options: ["Excel", "Tableau", "Matplotlib", "ggplot2", "Power BI"],
         answer: "ggplot2",
-        explanation: "Jack loves the control and aesthetics of ggplot2 for data visualization."
+        explanation: "I love the control and aesthetics of ggplot2."
     },
     {
         question: "What's Jack's secret passion project?",
         options: ["Mobile app development", "Vlogging", "Game development", "Woodworking"],
         answer: "Game development",
-        explanation: "One day Jack hopes to release the game he always wanted to play as a kid."
+        explanation: "One day I hope to release the game I always wanted to play as a kid."
     }
 ];
 
