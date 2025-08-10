@@ -33,13 +33,13 @@ const gameQuestions = [
     },
     {
         question: "What was Jack's first programming language?",
-        options: ["Python", "Java", "C++", "JavaScript"],
+        options: ["Python", "C++", "Java", "JavaScript"],
         answer: "Java",
         explanation: "I started with object-oriented programming in Java in high school."
     },
     {
         question: "What language did Jack study in college?",
-        options: ["Spanish", "Japanese", "German", "French"],
+        options: ["Spanish", "German", "French", "Japanese"],
         answer: "Japanese",
         explanation: "I studied Japanese for four semesters and nearly completed an Asian Studies major."
     },
@@ -57,9 +57,9 @@ const gameQuestions = [
     },
     {
         question: "What's Jack's go-to data visualization tool?",
-        options: ["Excel", "Tableau", "Matplotlib", "ggplot2", "Power BI"],
-        answer: "ggplot2",
-        explanation: "I love the control and aesthetics of ggplot2."
+        options: ["Excel", "Tableau", "Matplotlib", "GGPlot2", "Power BI"],
+        answer: "GGPlot2",
+        explanation: "I love the control and aesthetics of GGPlot2."
     },
     {
         question: "What's Jack's secret passion project?",
@@ -177,3 +177,40 @@ function restartGame() {
 document.addEventListener('DOMContentLoaded', function() {
     loadQuestion();
 });
+
+// Smooth scrolling to skills section with highlighting
+function scrollToSkills(skillName = null) {
+    // Clear any existing highlights
+    clearSkillHighlights();
+    
+    // Scroll to skills section
+    document.getElementById('skills').scrollIntoView({
+        behavior: 'smooth'
+    });
+    
+    // If a specific skill was clicked, highlight it after scrolling
+    if (skillName) {
+        setTimeout(() => {
+            highlightSkill(skillName);
+        }, 800); // Delay to allow scrolling to complete
+    }
+}
+
+// Function to highlight a specific skill card
+function highlightSkill(skillName) {
+    const skillCards = document.querySelectorAll('.skill-card');
+    
+    skillCards.forEach(card => {
+        if (card.textContent.trim() === skillName) {
+            card.classList.add('highlighted');
+        }
+    });
+}
+
+// Function to clear all skill highlights
+function clearSkillHighlights() {
+    const highlightedCards = document.querySelectorAll('.skill-card.highlighted');
+    highlightedCards.forEach(card => {
+        card.classList.remove('highlighted');
+    });
+}

@@ -362,7 +362,7 @@ h2 {
 .graduation-icon {
     width: 60px;
     height: 60px;
-    background-color: var(--dark-grey);
+    background-color: white;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -375,8 +375,8 @@ h2 {
 .graduation-icon img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 6px;
+    object-fit: contain;
+    border-radius: 4px;
 }
 
 .graduation-text {
@@ -472,7 +472,7 @@ h2 {
     height: 80px;
     border-radius: 8px;
     margin-bottom: 1rem;
-    background-color: var(--dark-grey);
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -484,8 +484,8 @@ h2 {
 .content-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 6px;
+    object-fit: contain;
+    border-radius: 4px;
 }
 
 /* Content Text */
@@ -514,6 +514,280 @@ h2 {
     font-style: italic;
 }
 
+/* Skill Pills Styles */
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+
+.skill-pill {
+    background-color: var(--accent-purple);
+    color: var(--text-white);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent-purple);
+    white-space: nowrap;
+}
+
+.skill-pill:hover {
+    background-color: var(--text-white);
+    color: var(--accent-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+}
+
+/* Highlighted skill card in skills section */
+.skill-card.highlighted {
+    background-color: var(--accent-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(88, 101, 242, 0.4);
+    animation: highlightPulse 1s ease-in-out;
+}
+
+@keyframes highlightPulse {
+    0% { box-shadow: 0 6px 15px rgba(88, 101, 242, 0.4); }
+    50% { box-shadow: 0 8px 20px rgba(88, 101, 242, 0.6); }
+    100% { box-shadow: 0 6px 15px rgba(88, 101, 242, 0.4); }
+}
+
+/* Timeline-specific skill pills with different colors by category */
+.timeline-content .skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+
+.timeline-content .skill-pill {
+    color: var(--text-white);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid;
+    white-space: nowrap;
+}
+
+/* Programming Languages */
+.timeline-content .skill-pill[onclick*="Python"] {
+    background-color: #3776ab;
+    border-color: #3776ab;
+}
+
+.timeline-content .skill-pill[onclick*="Python"]:hover {
+    background-color: var(--text-white);
+    color: #3776ab;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(55, 118, 171, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="R"] {
+    background-color: #276dc3;
+    border-color: #276dc3;
+}
+
+.timeline-content .skill-pill[onclick*="R"]:hover {
+    background-color: var(--text-white);
+    color: #276dc3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 109, 195, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="SQL"] {
+    background-color: #f29111;
+    border-color: #f29111;
+}
+
+.timeline-content .skill-pill[onclick*="SQL"]:hover {
+    background-color: var(--text-white);
+    color: #f29111;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(242, 145, 17, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="Java"] {
+    background-color: #ed8b00;
+    border-color: #ed8b00;
+}
+
+.timeline-content .skill-pill[onclick*="Java"]:hover {
+    background-color: var(--text-white);
+    color: #ed8b00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(237, 139, 0, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="JavaScript"] {
+    background-color: #f7df1e;
+    border-color: #f7df1e;
+    color: #000;
+}
+
+.timeline-content .skill-pill[onclick*="JavaScript"]:hover {
+    background-color: #000;
+    color: #f7df1e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(247, 223, 30, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="HTML/CSS"] {
+    background-color: #e34f26;
+    border-color: #e34f26;
+}
+
+.timeline-content .skill-pill[onclick*="HTML/CSS"]:hover {
+    background-color: var(--text-white);
+    color: #e34f26;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(227, 79, 38, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="LaTeX"] {
+    background-color: #008080;
+    border-color: #008080;
+}
+
+.timeline-content .skill-pill[onclick*="LaTeX"]:hover {
+    background-color: var(--text-white);
+    color: #008080;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
+}
+
+/* Data Science Libraries */
+.timeline-content .skill-pill[onclick*="Pandas"] {
+    background-color: #150458;
+    border-color: #150458;
+}
+
+.timeline-content .skill-pill[onclick*="Pandas"]:hover {
+    background-color: var(--text-white);
+    color: #150458;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(21, 4, 88, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="Matplotlib"] {
+    background-color: #11557c;
+    border-color: #11557c;
+}
+
+.timeline-content .skill-pill[onclick*="Matplotlib"]:hover {
+    background-color: var(--text-white);
+    color: #11557c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(17, 85, 124, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="Scikit-Learn"] {
+    background-color: #f7931e;
+    border-color: #f7931e;
+}
+
+.timeline-content .skill-pill[onclick*="Scikit-Learn"]:hover {
+    background-color: var(--text-white);
+    color: #f7931e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(247, 147, 30, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="XGBoost"] {
+    background-color: #ff6600;
+    border-color: #ff6600;
+}
+
+.timeline-content .skill-pill[onclick*="XGBoost"]:hover {
+    background-color: var(--text-white);
+    color: #ff6600;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+}
+
+/* R Libraries */
+.timeline-content .skill-pill[onclick*="Tidyverse"] {
+    background-color: #1a162d;
+    border-color: #1a162d;
+}
+
+.timeline-content .skill-pill[onclick*="Tidyverse"]:hover {
+    background-color: var(--text-white);
+    color: #1a162d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 22, 45, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="GGPlot2"] {
+    background-color: #c51b7d;
+    border-color: #c51b7d;
+}
+
+.timeline-content .skill-pill[onclick*="GGPlot2"]:hover {
+    background-color: var(--text-white);
+    color: #c51b7d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(197, 27, 125, 0.3);
+}
+
+/* Tools and Frameworks */
+.timeline-content .skill-pill[onclick*="Tableau"] {
+    background-color: #e97627;
+    border-color: #e97627;
+}
+
+.timeline-content .skill-pill[onclick*="Tableau"]:hover {
+    background-color: var(--text-white);
+    color: #e97627;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(233, 118, 39, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="Flask"] {
+    background-color: #000;
+    border-color: #000;
+}
+
+.timeline-content .skill-pill[onclick*="Flask"]:hover {
+    background-color: var(--text-white);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="Excel"] {
+    background-color: #217346;
+    border-color: #217346;
+}
+
+.timeline-content .skill-pill[onclick*="Excel"]:hover {
+    background-color: var(--text-white);
+    color: #217346;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 115, 70, 0.3);
+}
+
+/* Keep original purple for any skills not specifically defined */
+.timeline-content .skill-pill:not([onclick*="Python"]):not([onclick*="R"]):not([onclick*="SQL"]):not([onclick*="Java"]):not([onclick*="JavaScript"]):not([onclick*="HTML/CSS"]):not([onclick*="LaTeX"]):not([onclick*="Pandas"]):not([onclick*="Matplotlib"]):not([onclick*="Scikit-Learn"]):not([onclick*="XGBoost"]):not([onclick*="Tidyverse"]):not([onclick*="GGPlot2"]):not([onclick*="Tableau"]):not([onclick*="Flask"]):not([onclick*="Excel"]) {
+    background-color: var(--accent-purple);
+    border-color: var(--accent-purple);
+}
+
+.timeline-content .skill-pill:not([onclick*="Python"]):not([onclick*="R"]):not([onclick*="SQL"]):not([onclick*="Java"]):not([onclick*="JavaScript"]):not([onclick*="HTML/CSS"]):not([onclick*="LaTeX"]):not([onclick*="Pandas"]):not([onclick*="Matplotlib"]):not([onclick*="Scikit-Learn"]):not([onclick*="XGBoost"]):not([onclick*="Tidyverse"]):not([onclick*="GGPlot2"]):not([onclick*="Tableau"]):not([onclick*="Flask"]):not([onclick*="Excel"]):hover {
+    background-color: var(--text-white);
+    color: var(--accent-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+}
+
 /* Click Indicator */
 .click-indicator {
     position: absolute;
@@ -538,6 +812,71 @@ h2 {
     max-width: 800px;
     z-index: 10;
     box-shadow: 0 10px 25px rgba(88, 101, 242, 0.2);
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-category {
+    background-color: var(--dark-grey);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--primary-grey);
+    transition: all 0.3s ease;
+}
+
+.skills-category:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(88, 101, 242, 0.15);
+    border-color: var(--accent-purple);
+}
+
+.skills-category h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-purple);
+    text-align: center;
+    font-weight: 600;
+}
+
+.skills-grid-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    justify-items: center;
+}
+
+.skill-card {
+    background-color: var(--primary-grey);
+    color: var(--text-white);
+    padding: 1rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--accent-purple);
+    transition: all 0.3s ease;
+    cursor: default;
+    text-align: center;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.skill-card:hover {
+    background-color: var(--accent-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(88, 101, 242, 0.4);
 }
 
 /* Footer */
@@ -631,5 +970,40 @@ footer {
     
     .graduation-cap {
         max-width: 100%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skills-category {
+        padding: 1.5rem;
+    }
+    
+    .skills-category h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .skills-grid-inner {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.5rem;
+    }
+    
+    .skill-card {
+        font-size: 0.8rem;
+        padding: 0.75rem 0.5rem;
+        min-height: 50px;
+    }
+
+    .skill-pills {
+        justify-content: flex-start;
+        margin-top: 0.75rem;
+    }
+    
+    .skill-pill {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
     }
 }

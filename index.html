@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack's Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <!-- Header -->
@@ -14,6 +15,7 @@
                 <li><a href="#welcome" onclick="scrollToSection('welcome')">Welcome</a></li>
                 <li><a href="#timeline" onclick="scrollToSection('timeline')">Timeline</a></li>
                 <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
+                <li><a href="#skills" onclick="scrollToSection('skills')">Skills</a></li>
                 <li><a href="#game" onclick="scrollToSection('game')">Game</a></li>
                 <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
             </ul>
@@ -39,11 +41,11 @@
             <div class="timeline-container">
                 <div class="timeline-line"></div>
                 
-                <!-- College Graduation (Top) -->
+                <!-- College Graduation -->
                 <div class="graduation-cap">
                     <div class="graduation-header">
                         <div class="graduation-icon">
-                            <img src="images/FurmanIcon.png" alt="Furman University">
+                            <img src="images/thumbnails/FurmanThumbnail.png" alt="Furman University">
                         </div>
                         <div class="graduation-text">
                             <div class="graduation-title">Bachelor's Degrees</div>
@@ -72,6 +74,11 @@
                         <div class="content-subtitle">Furman University</div>
                         <div class="content-description">Presentation to the student body on my research with Walt Disney World Resort from May 2024. Improved seating efficiency on the Tower of Terror ride by 5%, translating to an additional $20.8M per year in ticket sales.</div>
                         <div class="content-date">April 2025</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Pandas')">Pandas</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Matplotlib')">Matplotlib</span>
+                        </div>
                     </div>
                 </div>
 
@@ -86,6 +93,11 @@
                         <div class="content-subtitle">Furman University</div>
                         <div class="content-description">Weekend-long data analytics competition against Furman and Emory students. Won "Best Visualization" with two teammates. Nearly all work done in Python with Pandas and Matplotlib.</div>
                         <div class="content-date">April 2025</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Pandas')">Pandas</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Matplotlib')">Matplotlib</span>
+                        </div>
                     </div>
                 </div>
 
@@ -104,6 +116,10 @@
                         <div class="content-subtitle">Furman University</div>
                         <div class="content-description"></div>
                         <div class="content-date">December 2024</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="scrollToSkills('HTML/CSS')">HTML/CSS</span>
+                            <span class="skill-pill" onclick="scrollToSkills('JavaScript')">JavaScript</span>
+                        </div>
                     </div>
                 </div>
 
@@ -117,6 +133,12 @@
                         <div class="content-subtitle">Furman University</div>
                         <div class="content-description">Weekend-long data analytics competition against Furman students. Won "Best Story" with one teammate.</div>
                         <div class="content-date">November 2024</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="scrollToSkills('R')">R</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Pandas')">Pandas</span>
+                            <span class="skill-pill" onclick="scrollToSkills('GGPlot2')">GGPlot2</span>
+                        </div>
                     </div>
                 </div>
 
@@ -130,6 +152,11 @@
                         <div class="content-subtitle">Independent</div>
                         <div class="content-description">Engineered 40 features from 3500 personal chess games using Chess.com API to predict outcomes with XGBoost. Identified loss-prone patterns and achieved a 15% increase in win percentage.</div>
                         <div class="content-date">September 2024</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Pandas')">Pandas</span>
+                            <span class="skill-pill" onclick="scrollToSkills('XGBoost')">XGBoost</span>
+                        </div>
                     </div>
                 </div>
 
@@ -137,12 +164,17 @@
                 <div class="timeline-item right">
                     <div class="timeline-content">
                         <div class="content-image">
-                            <img src="images/projects/BMWResearch.png" alt="BMW Group Research">
+                            <img src="images/thumbnails/BMWThumbnail.png" alt="BMW Group Research">
                         </div>
                         <div class="content-title">Data Quality and Assembly Line Researcher</div>
                         <div class="content-subtitle">BMW Group</div>
                         <div class="content-description">Uncovered discrepancies between internal defect reporting datasets and launched a Flask-based website for forecasting assembly line bottlenecks in real-time to minimize downtime.</div>
                         <div class="content-date">August 2024 - May 2025</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="scrollToSkills('SQL')">SQL</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Flask')">Flask</span>
+                        </div>
                     </div>
                 </div>
 
@@ -150,25 +182,36 @@
                 <div class="timeline-item left">
                     <div class="timeline-content">
                         <div class="content-image">
-                            <img src="images/projects/DisneyResearch.png" alt="The Walt Disney Company">
+                            <img src="images/thumbnails/DisneyThumbnail.png" alt="The Walt Disney Company">
                         </div>
                         <div class="content-title">Attraction Efficiency Researcher</div>
                         <div class="content-subtitle">The Walt Disney Company</div>
                         <div class="content-description">Collected 1100 data points on Tower of Terror seating patterns to model 7 seating strategies. Presented human-implementable strategy that increased efficiency by 5%, adding 480 riders per day.</div>
                         <div class="content-date">May 2024</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Pandas')">Pandas</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Matplotlib')">Matplotlib</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Shoals Technology Internship -->
+                <!-- Shoals Technologies Internship -->
                 <div class="timeline-item right">
                     <div class="timeline-content">
                         <div class="content-image">
-                            <img src="images/projects/ShoalsTechnology.png" alt="Shoals Technology Group">
+                            <img src="images/thumbnails/ShoalsThumbnail.png" alt="Shoals Technologies Group">
                         </div>
                         <div class="content-title">Financial Planning and Analysis Intern</div>
-                        <div class="content-subtitle">Shoals Technology Group</div>
+                        <div class="content-subtitle">Shoals Technologies Group</div>
                         <div class="content-description">Consolidated 7 datasets with SQL and Python to analyze market share and forecast revenue through 2027. Built Tableau dashboards for Q3 earnings report and discovered $100M in additional addressable markets.</div>
                         <div class="content-date">April 2024 - August 2025</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="scrollToSkills('SQL')">SQL</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Pandas')">Pandas</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Tableau')">Tableau</span>
+                        </div>
                     </div>
                 </div>
 
@@ -183,6 +226,12 @@
                         <div class="content-subtitle">Furman University</div>
                         <div class="content-description"></div>
                         <div class="content-date">April 2024</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('R')">R</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('LaTeX')">LaTeX</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Tidyverse')">Tidyverse</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('GGPlot2')">GGPlot2</span>
+                        </div>
                     </div>
                 </div>
 
@@ -196,6 +245,12 @@
                         <div class="content-subtitle">Wake Forest University</div>
                         <div class="content-description"></div>
                         <div class="content-date">April 2024</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="scrollToSkills('R')">R</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Pandas')">Pandas</span>
+                            <span class="skill-pill" onclick="scrollToSkills('GGPlot2')">GGPlot2</span>
+                        </div>
                     </div>
                 </div>
 
@@ -215,6 +270,12 @@
                         <div class="content-subtitle">Furman University</div>
                         <div class="content-description">Statistics in R final project analyzing Kaggle dataset of 1200 pregnant women using 8 regression models including Ridge and LASSO. Co-authored 40-page LaTeX report with 800+ lines of R code.</div>
                         <div class="content-date">December 2023</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('R')">R</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('LaTeX')">LaTeX</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Tidyverse')">Tidyverse</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('GGPlot2')">GGPlot2</span>
+                        </div>
                     </div>
                 </div>
 
@@ -222,12 +283,17 @@
                 <div class="timeline-item right">
                     <div class="timeline-content">
                         <div class="content-image">
-                            <img src="images/projects/CampsKitchen.png" alt="Camps Kitchen and Bar">
+                            <img src="images/thumbnails/CampsThumbnail.png" alt="Camps Kitchen and Bar">
                         </div>
                         <div class="content-title">Sales Data Analyst</div>
                         <div class="content-subtitle">Camps Kitchen and Bar</div>
                         <div class="content-description">Combined and cleaned monthly sales summaries to explore relationships between quantity sold, location, payment type, and revenue composition. Presented findings to management for business decision support.</div>
                         <div class="content-date">July 2023 - September 2023</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Excel')">Excel</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Pandas')">Pandas</span>
+                        </div>
                     </div>
                 </div>
 
@@ -247,6 +313,11 @@
                         <div class="content-subtitle">Furman University</div>
                         <div class="content-description">Machine learning project analyzing Spotify track features to predict song success metrics. Applied classification algorithms and feature engineering techniques to identify key factors in music popularity.</div>
                         <div class="content-date">December 2021</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Scikit-Learn')">Scikit-Learn</span>
+                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Pandas')">Pandas</span>
+                        </div>
                     </div>
                 </div>
 
@@ -254,12 +325,16 @@
                 <div class="timeline-item right">
                     <div class="timeline-content">
                         <div class="content-image">
-                            <img src="images/projects/BelvedereAdvisors.png" alt="Belvedere Direct Lending Advisors">
+                            <img src="images/thumbnails/BelvedereThumbnail.png" alt="Belvedere Direct Lending Advisors">
                         </div>
                         <div class="content-title">Graphic Design and Marketing Assistant</div>
                         <div class="content-subtitle">Belvedere Direct Lending Advisors</div>
                         <div class="content-description">Developed marketing campaigns resulting in 100% increase of professional LinkedIn connections. Curated client lists based on business requirements, increasing direct mailing list by 30%.</div>
                         <div class="content-date">June 2021 - Present</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
+                            <span class="skill-pill" onclick="scrollToSkills('Excel')">Excel</span>
+                        </div>
                     </div>
                 </div>
 
@@ -267,7 +342,7 @@
                 <div class="graduation-cap">
                     <div class="graduation-header">
                         <div class="graduation-icon">
-                            <img src="images/WaltonIcon.png" alt="Walton High School">
+                            <img src="images/thumbnails/WaltonThumbnail.png" alt="Walton High School">
                         </div>
                         <div class="graduation-text">
                             <div class="graduation-title">High School Diploma</div>
@@ -334,6 +409,81 @@
             </div>
         </section>
 
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <!-- Languages-->
+                <div class="skills-category">
+                    <h3>💻 Languages</h3>
+                    <div class="skills-grid-inner">
+                        <div class="skill-card">Python</div>
+                        <div class="skill-card">R</div>
+                        <div class="skill-card">SQL</div>
+                        <div class="skill-card">Java</div>
+                        <div class="skill-card">JavaScript</div>
+                        <div class="skill-card">HTML/CSS</div>
+                        <div class="skill-card">Bash</div>
+                        <div class="skill-card">Powershell</div>
+                        <div class="skill-card">LaTeX</div>
+                    </div>
+                </div>
+                
+                <!-- Software-->
+                <div class="skills-category">
+                    <h3>🛠️ Software</h3>
+                    <div class="skills-grid-inner">
+                        <div class="skill-card">Tableau</div>
+                        <div class="skill-card">Excel</div>
+                        <div class="skill-card">GitHub</div>
+                        <div class="skill-card">Jupyter</div>
+                        <div class="skill-card">Google Colab</div>
+                        <div class="skill-card">VS Code</div>
+                        <div class="skill-card">RStudio</div>
+                    </div>
+                </div>
+                
+                <!-- Libraries-->
+                <div class="skills-category">
+                    <h3>📚 Libraries & Frameworks</h3>
+                    <div class="skills-grid-inner">
+                        <div class="skill-card">PyTorch</div>
+                        <div class="skill-card">TensorFlow</div>
+                        <div class="skill-card">Pandas</div>
+                        <div class="skill-card">Scikit-Learn</div>
+                        <div class="skill-card">Matplotlib</div>
+                        <div class="skill-card">Flask</div>
+                        <div class="skill-card">Tidyverse</div>
+                        <div class="skill-card">GGPlot2</div>
+                        <div class="skill-card">xTable</div>
+                        <div class="skill-card">XGBoost</div>
+                        <div class="skill-card">Joblib</div>
+                        <div class="skill-card">JUnit</div>
+                        <div class="skill-card">Fetch</div>
+                        <div class="skill-card">Requests</div>
+                    </div>
+                </div>
+                
+                <!-- Technical Experience-->
+                <div class="skills-category">
+                    <h3>⚡ Technical Experience</h3>
+                    <div class="skills-grid-inner">
+                        <div class="skill-card">APIs</div>
+                        <div class="skill-card">Exploratory Analysis</div>
+                        <div class="skill-card">Data Pipelining</div>
+                        <div class="skill-card">Feature Selection</div>
+                        <div class="skill-card">Model Selection</div>
+                        <div class="skill-card">Statistical Tests</div>
+                        <div class="skill-card">Model Deployment</div>
+                        <div class="skill-card">Data Visualization</div>
+                        <div class="skill-card">Multi-threading</div>
+                        <div class="skill-card">Web Development</div>
+                        <div class="skill-card">Unit Testing</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Game Section -->
         <section id="game" class="section-alt">
             <h2>Get to Know Me</h2>
@@ -361,6 +511,7 @@
                 <a style="font-size: 30px;" href="mailto:jackhroberts02@gmail.com" class="contact-link">Email</a>
                 <a style="font-size: 30px;" href="https://linkedin.com/in/jack-h-roberts/" class="contact-link" target="_blank">LinkedIn</a>
                 <a style="font-size: 30px;" href="https://github.com/Jack-H-Roberts" class="contact-link" target="_blank">GitHub</a>
+                <a style="font-size: 30px;" href="Resume.html" class="contact-link">Resume</a>
             </div>
         </section>
     </div>
