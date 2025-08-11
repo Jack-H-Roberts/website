@@ -307,6 +307,24 @@ h2 {
     background-color: #4752c4;
 }
 
+.github-link {
+    position: fixed;
+    top: 100px;
+    right: 2rem;
+    background-color: var(--accent-purple);
+    color: var(--text-white);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    z-index: 1001;
+}
+
+.github-link:hover {
+    background-color: #4752c4;
+}
+
 /* Timeline Container */
 .timeline-section {
     padding: 4rem 2rem;
@@ -980,7 +998,8 @@ footer {
         max-width: 100%;
     }
     
-    .back-link {
+    .back-link,
+    .github-link {
         position: static;
         display: block;
         text-align: center;
