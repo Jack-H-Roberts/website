@@ -484,7 +484,7 @@ h2 {
 .content-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
     border-radius: 4px;
 }
 
@@ -615,18 +615,6 @@ h2 {
     box-shadow: 0 4px 12px rgba(242, 145, 17, 0.3);
 }
 
-.timeline-content .skill-pill[onclick*="Java"] {
-    background-color: #ed8b00;
-    border-color: #ed8b00;
-}
-
-.timeline-content .skill-pill[onclick*="Java"]:hover {
-    background-color: var(--text-white);
-    color: #ed8b00;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(237, 139, 0, 0.3);
-}
-
 .timeline-content .skill-pill[onclick*="JavaScript"] {
     background-color: #f7df1e;
     border-color: #f7df1e;
@@ -664,6 +652,18 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
 }
 
+.timeline-content .skill-pill[onclick*="Bash"] {
+    background-color: #4eaa25;
+    border-color: #4eaa25;
+}
+
+.timeline-content .skill-pill[onclick*="Bash"]:hover {
+    background-color: var(--text-white);
+    color: #4eaa25;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(78, 170, 37, 0.3);
+}
+
 /* Data Science Libraries */
 .timeline-content .skill-pill[onclick*="Pandas"] {
     background-color: #150458;
@@ -687,18 +687,6 @@ h2 {
     color: #11557c;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(17, 85, 124, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="Scikit-Learn"] {
-    background-color: #f7931e;
-    border-color: #f7931e;
-}
-
-.timeline-content .skill-pill[onclick*="Scikit-Learn"]:hover {
-    background-color: var(--text-white);
-    color: #f7931e;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(247, 147, 30, 0.3);
 }
 
 .timeline-content .skill-pill[onclick*="XGBoost"] {
@@ -738,7 +726,7 @@ h2 {
     box-shadow: 0 4px 12px rgba(197, 27, 125, 0.3);
 }
 
-/* Tools and Frameworks */
+/* Tools and Software */
 .timeline-content .skill-pill[onclick*="Tableau"] {
     background-color: #e97627;
     border-color: #e97627;
@@ -775,13 +763,74 @@ h2 {
     box-shadow: 0 4px 12px rgba(33, 115, 70, 0.3);
 }
 
+/* Technical Skills */
+.timeline-content .skill-pill[onclick*="APIs"] {
+    background-color: #ff5722;
+    border-color: #ff5722;
+}
+
+.timeline-content .skill-pill[onclick*="APIs"]:hover {
+    background-color: var(--text-white);
+    color: #ff5722;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="Model Deployment"] {
+    background-color: #607d8b;
+    border-color: #607d8b;
+}
+
+.timeline-content .skill-pill[onclick*="Model Deployment"]:hover {
+    background-color: var(--text-white);
+    color: #607d8b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(96, 125, 139, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="Data Pipelining"] {
+    background-color: #795548;
+    border-color: #795548;
+}
+
+.timeline-content .skill-pill[onclick*="Data Pipelining"]:hover {
+    background-color: var(--text-white);
+    color: #795548;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(121, 85, 72, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="Data Visualization"] {
+    background-color: #9c27b0;
+    border-color: #9c27b0;
+}
+
+.timeline-content .skill-pill[onclick*="Data Visualization"]:hover {
+    background-color: var(--text-white);
+    color: #9c27b0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+}
+
+.timeline-content .skill-pill[onclick*="Feature Selection"] {
+    background-color: #009688;
+    border-color: #009688;
+}
+
+.timeline-content .skill-pill[onclick*="Feature Selection"]:hover {
+    background-color: var(--text-white);
+    color: #009688;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 150, 136, 0.3);
+}
+
 /* Keep original purple for any skills not specifically defined */
-.timeline-content .skill-pill:not([onclick*="Python"]):not([onclick*="R"]):not([onclick*="SQL"]):not([onclick*="Java"]):not([onclick*="JavaScript"]):not([onclick*="HTML/CSS"]):not([onclick*="LaTeX"]):not([onclick*="Pandas"]):not([onclick*="Matplotlib"]):not([onclick*="Scikit-Learn"]):not([onclick*="XGBoost"]):not([onclick*="Tidyverse"]):not([onclick*="GGPlot2"]):not([onclick*="Tableau"]):not([onclick*="Flask"]):not([onclick*="Excel"]) {
+.timeline-content .skill-pill:not([onclick*="Python"]):not([onclick*="R"]):not([onclick*="SQL"]):not([onclick*="JavaScript"]):not([onclick*="HTML/CSS"]):not([onclick*="LaTeX"]):not([onclick*="Bash"]):not([onclick*="Pandas"]):not([onclick*="Matplotlib"]):not([onclick*="XGBoost"]):not([onclick*="Tidyverse"]):not([onclick*="GGPlot2"]):not([onclick*="Tableau"]):not([onclick*="Flask"]):not([onclick*="Excel"]):not([onclick*="APIs"]):not([onclick*="Model Deployment"]):not([onclick*="Data Pipelining"]):not([onclick*="Data Visualization"]):not([onclick*="Feature Selection"]) {
     background-color: var(--accent-purple);
     border-color: var(--accent-purple);
 }
 
-.timeline-content .skill-pill:not([onclick*="Python"]):not([onclick*="R"]):not([onclick*="SQL"]):not([onclick*="Java"]):not([onclick*="JavaScript"]):not([onclick*="HTML/CSS"]):not([onclick*="LaTeX"]):not([onclick*="Pandas"]):not([onclick*="Matplotlib"]):not([onclick*="Scikit-Learn"]):not([onclick*="XGBoost"]):not([onclick*="Tidyverse"]):not([onclick*="GGPlot2"]):not([onclick*="Tableau"]):not([onclick*="Flask"]):not([onclick*="Excel"]):hover {
+.timeline-content .skill-pill:not([onclick*="Python"]):not([onclick*="R"]):not([onclick*="SQL"]):not([onclick*="JavaScript"]):not([onclick*="HTML/CSS"]):not([onclick*="LaTeX"]):not([onclick*="Bash"]):not([onclick*="Pandas"]):not([onclick*="Matplotlib"]):not([onclick*="XGBoost"]):not([onclick*="Tidyverse"]):not([onclick*="GGPlot2"]):not([onclick*="Tableau"]):not([onclick*="Flask"]):not([onclick*="Excel"]):not([onclick*="APIs"]):not([onclick*="Model Deployment"]):not([onclick*="Data Pipelining"]):not([onclick*="Data Visualization"]):not([onclick*="Feature Selection"]):hover {
     background-color: var(--text-white);
     color: var(--accent-purple);
     transform: translateY(-2px);
