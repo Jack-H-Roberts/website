@@ -14,6 +14,7 @@
 
 html {
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -56,7 +57,7 @@ nav a:hover {
 section {
     padding: 4rem 2rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
 }
 
 .section-alt {
@@ -432,11 +433,17 @@ h2 {
     margin: 3rem 0;
 }
 
+.timeline-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 /* Manual positioning classes */
 .timeline-item.left .timeline-content {
     margin-left: 0;
     margin-right: calc(50% + 30px);
-    text-align: left; /* Changed from right to left */
+    text-align: left;
 }
 
 .timeline-item.right .timeline-content {
@@ -478,10 +485,6 @@ h2 {
 
 .timeline-content.clickable {
     cursor: pointer;
-}
-
-.timeline-content.clickable:hover {
-    border-color: var(--accent-purple);
 }
 
 /* Content Images */
@@ -548,17 +551,8 @@ h2 {
     font-weight: 500;
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
     border: 1px solid var(--accent-purple);
     white-space: nowrap;
-}
-
-.skill-pill:hover {
-    background-color: var(--text-white);
-    color: var(--accent-purple);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
 }
 
 /* Highlighted skill card in skills section */
@@ -590,269 +584,149 @@ h2 {
     font-weight: 500;
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
     border: 1px solid;
     white-space: nowrap;
 }
 
-/* Programming Languages */
-.timeline-content .skill-pill[onclick*="Python"] {
+/* Programming Languages - Using data attributes for styling */
+.timeline-content .skill-pill[data-skill="Python"] {
     background-color: #3776ab;
     border-color: #3776ab;
 }
 
-.timeline-content .skill-pill[onclick*="Python"]:hover {
-    background-color: var(--text-white);
-    color: #3776ab;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(55, 118, 171, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="R"] {
+.timeline-content .skill-pill[data-skill="R"] {
     background-color: #276dc3;
     border-color: #276dc3;
 }
 
-.timeline-content .skill-pill[onclick*="R"]:hover {
-    background-color: var(--text-white);
-    color: #276dc3;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(39, 109, 195, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="SQL"] {
+.timeline-content .skill-pill[data-skill="SQL"] {
     background-color: #f29111;
     border-color: #f29111;
 }
 
-.timeline-content .skill-pill[onclick*="SQL"]:hover {
-    background-color: var(--text-white);
-    color: #f29111;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(242, 145, 17, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="JavaScript"] {
+.timeline-content .skill-pill[data-skill="JavaScript"] {
     background-color: #f7df1e;
     border-color: #f7df1e;
     color: #000;
 }
 
-.timeline-content .skill-pill[onclick*="JavaScript"]:hover {
-    background-color: #000;
-    color: #f7df1e;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(247, 223, 30, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="HTML/CSS"] {
+.timeline-content .skill-pill[data-skill="HTML/CSS"] {
     background-color: #e34f26;
     border-color: #e34f26;
 }
 
-.timeline-content .skill-pill[onclick*="HTML/CSS"]:hover {
-    background-color: var(--text-white);
-    color: #e34f26;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(227, 79, 38, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="LaTeX"] {
-    background-color: #008080;
-    border-color: #008080;
-}
-
-.timeline-content .skill-pill[onclick*="LaTeX"]:hover {
-    background-color: var(--text-white);
-    color: #008080;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="Bash"] {
-    background-color: #4eaa25;
-    border-color: #4eaa25;
-}
-
-.timeline-content .skill-pill[onclick*="Bash"]:hover {
-    background-color: var(--text-white);
-    color: #4eaa25;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(78, 170, 37, 0.3);
+.timeline-content .skill-pill[data-skill="Java"] {
+    background-color: #007396;
+    border-color: #007396;
 }
 
 /* Data Science Libraries */
-.timeline-content .skill-pill[onclick*="Pandas"] {
+.timeline-content .skill-pill[data-skill="Pandas"] {
     background-color: #150458;
     border-color: #150458;
 }
 
-.timeline-content .skill-pill[onclick*="Pandas"]:hover {
-    background-color: var(--text-white);
-    color: #150458;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(21, 4, 88, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="Matplotlib"] {
+.timeline-content .skill-pill[data-skill="Matplotlib"] {
     background-color: #11557c;
     border-color: #11557c;
 }
 
-.timeline-content .skill-pill[onclick*="Matplotlib"]:hover {
-    background-color: var(--text-white);
-    color: #11557c;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(17, 85, 124, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="XGBoost"] {
+.timeline-content .skill-pill[data-skill="XGBoost"] {
     background-color: #ff6600;
     border-color: #ff6600;
 }
 
-.timeline-content .skill-pill[onclick*="XGBoost"]:hover {
-    background-color: var(--text-white);
-    color: #ff6600;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
-}
-
 /* R Libraries */
-.timeline-content .skill-pill[onclick*="Tidyverse"] {
+.timeline-content .skill-pill[data-skill="Tidyverse"] {
     background-color: #1a162d;
     border-color: #1a162d;
 }
 
-.timeline-content .skill-pill[onclick*="Tidyverse"]:hover {
-    background-color: var(--text-white);
-    color: #1a162d;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(26, 22, 45, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="GGPlot2"] {
+.timeline-content .skill-pill[data-skill="GGPlot2"] {
     background-color: #c51b7d;
     border-color: #c51b7d;
 }
 
-.timeline-content .skill-pill[onclick*="GGPlot2"]:hover {
-    background-color: var(--text-white);
-    color: #c51b7d;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(197, 27, 125, 0.3);
+.timeline-content .skill-pill[data-skill="xTable"] {
+    background-color: #4a148c;
+    border-color: #4a148c;
 }
 
 /* Tools and Software */
-.timeline-content .skill-pill[onclick*="Tableau"] {
+.timeline-content .skill-pill[data-skill="Tableau"] {
     background-color: #e97627;
     border-color: #e97627;
 }
 
-.timeline-content .skill-pill[onclick*="Tableau"]:hover {
-    background-color: var(--text-white);
-    color: #e97627;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(233, 118, 39, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="Flask"] {
+.timeline-content .skill-pill[data-skill="Flask"] {
     background-color: #000;
     border-color: #000;
 }
 
-.timeline-content .skill-pill[onclick*="Flask"]:hover {
-    background-color: var(--text-white);
-    color: #000;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="Excel"] {
+.timeline-content .skill-pill[data-skill="Excel"] {
     background-color: #217346;
     border-color: #217346;
 }
 
-.timeline-content .skill-pill[onclick*="Excel"]:hover {
-    background-color: var(--text-white);
-    color: #217346;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(33, 115, 70, 0.3);
+.timeline-content .skill-pill[data-skill="GitHub"] {
+    background-color: #181717;
+    border-color: #181717;
 }
 
 /* Technical Skills */
-.timeline-content .skill-pill[onclick*="APIs"] {
+.timeline-content .skill-pill[data-skill="REST API"] {
     background-color: #ff5722;
     border-color: #ff5722;
 }
 
-.timeline-content .skill-pill[onclick*="APIs"]:hover {
-    background-color: var(--text-white);
-    color: #ff5722;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="Model Deployment"] {
+.timeline-content .skill-pill[data-skill="Model Deployment"] {
     background-color: #607d8b;
     border-color: #607d8b;
 }
 
-.timeline-content .skill-pill[onclick*="Model Deployment"]:hover {
-    background-color: var(--text-white);
-    color: #607d8b;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(96, 125, 139, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="Data Pipelining"] {
+.timeline-content .skill-pill[data-skill="Data Pipelining"] {
     background-color: #795548;
     border-color: #795548;
 }
 
-.timeline-content .skill-pill[onclick*="Data Pipelining"]:hover {
-    background-color: var(--text-white);
-    color: #795548;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(121, 85, 72, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="Data Visualization"] {
+.timeline-content .skill-pill[data-skill="Data Visualization"] {
     background-color: #9c27b0;
     border-color: #9c27b0;
 }
 
-.timeline-content .skill-pill[onclick*="Data Visualization"]:hover {
-    background-color: var(--text-white);
-    color: #9c27b0;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
-}
-
-.timeline-content .skill-pill[onclick*="Feature Selection"] {
+.timeline-content .skill-pill[data-skill="Feature Selection"] {
     background-color: #009688;
     border-color: #009688;
 }
 
-.timeline-content .skill-pill[onclick*="Feature Selection"]:hover {
-    background-color: var(--text-white);
-    color: #009688;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 150, 136, 0.3);
+.timeline-content .skill-pill[data-skill="Model Selection"] {
+    background-color: #00acc1;
+    border-color: #00acc1;
 }
 
-/* Keep original purple for any skills not specifically defined */
-.timeline-content .skill-pill:not([onclick*="Python"]):not([onclick*="R"]):not([onclick*="SQL"]):not([onclick*="JavaScript"]):not([onclick*="HTML/CSS"]):not([onclick*="LaTeX"]):not([onclick*="Bash"]):not([onclick*="Pandas"]):not([onclick*="Matplotlib"]):not([onclick*="XGBoost"]):not([onclick*="Tidyverse"]):not([onclick*="GGPlot2"]):not([onclick*="Tableau"]):not([onclick*="Flask"]):not([onclick*="Excel"]):not([onclick*="APIs"]):not([onclick*="Model Deployment"]):not([onclick*="Data Pipelining"]):not([onclick*="Data Visualization"]):not([onclick*="Feature Selection"]) {
-    background-color: var(--accent-purple);
-    border-color: var(--accent-purple);
+.timeline-content .skill-pill[data-skill="Statistical Tests"] {
+    background-color: #3f51b5;
+    border-color: #3f51b5;
 }
 
-.timeline-content .skill-pill:not([onclick*="Python"]):not([onclick*="R"]):not([onclick*="SQL"]):not([onclick*="JavaScript"]):not([onclick*="HTML/CSS"]):not([onclick*="LaTeX"]):not([onclick*="Bash"]):not([onclick*="Pandas"]):not([onclick*="Matplotlib"]):not([onclick*="XGBoost"]):not([onclick*="Tidyverse"]):not([onclick*="GGPlot2"]):not([onclick*="Tableau"]):not([onclick*="Flask"]):not([onclick*="Excel"]):not([onclick*="APIs"]):not([onclick*="Model Deployment"]):not([onclick*="Data Pipelining"]):not([onclick*="Data Visualization"]):not([onclick*="Feature Selection"]):hover {
-    background-color: var(--text-white);
-    color: var(--accent-purple);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+.timeline-content .skill-pill[data-skill="Exploratory Analysis"] {
+    background-color: #673ab7;
+    border-color: #673ab7;
+}
+
+.timeline-content .skill-pill[data-skill="Multi-threading"] {
+    background-color: #ff9800;
+    border-color: #ff9800;
+}
+
+.timeline-content .skill-pill[data-skill="Web Development"] {
+    background-color: #2196f3;
+    border-color: #2196f3;
+}
+
+.timeline-content .skill-pill[data-skill="Unit Testing"] {
+    background-color: #4caf50;
+    border-color: #4caf50;
 }
 
 /* Click Indicator */
@@ -881,7 +755,7 @@ h2 {
     box-shadow: 0 10px 25px rgba(88, 101, 242, 0.2);
 }
 
-/* Skills Section */
+/* Skills Section - Updated Layout */
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -890,6 +764,12 @@ h2 {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .skills-category {
@@ -904,6 +784,10 @@ h2 {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(88, 101, 242, 0.15);
     border-color: var(--accent-purple);
+}
+
+.skills-category-full-height {
+    height: 100%;
 }
 
 .skills-category h3 {
@@ -1040,8 +924,13 @@ footer {
         max-width: 100%;
     }
 
+    /* Keep mobile skills layout as is - single column */
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skills-column {
         gap: 1.5rem;
     }
     

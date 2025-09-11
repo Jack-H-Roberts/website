@@ -1,10 +1,3 @@
-// Smooth scrolling function
-function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({
-        behavior: 'smooth'
-    });
-}
-
 // Game data
 const gameQuestions = [
     {
@@ -177,40 +170,3 @@ function restartGame() {
 document.addEventListener('DOMContentLoaded', function() {
     loadQuestion();
 });
-
-// Smooth scrolling to skills section with highlighting
-function scrollToSkills(skillName = null) {
-    // Clear any existing highlights
-    clearSkillHighlights();
-    
-    // Scroll to skills section
-    document.getElementById('skills').scrollIntoView({
-        behavior: 'smooth'
-    });
-    
-    // If a specific skill was clicked, highlight it after scrolling
-    if (skillName) {
-        setTimeout(() => {
-            highlightSkill(skillName);
-        }, 800); // Delay to allow scrolling to complete
-    }
-}
-
-// Function to highlight a specific skill card
-function highlightSkill(skillName) {
-    const skillCards = document.querySelectorAll('.skill-card');
-    
-    skillCards.forEach(card => {
-        if (card.textContent.trim() === skillName) {
-            card.classList.add('highlighted');
-        }
-    });
-}
-
-// Function to clear all skill highlights
-function clearSkillHighlights() {
-    const highlightedCards = document.querySelectorAll('.skill-card.highlighted');
-    highlightedCards.forEach(card => {
-        card.classList.remove('highlighted');
-    });
-}

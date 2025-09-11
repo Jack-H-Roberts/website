@@ -12,12 +12,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#welcome" onclick="scrollToSection('welcome')">Welcome</a></li>
-                <li><a href="#timeline" onclick="scrollToSection('timeline')">Timeline</a></li>
-                <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
-                <li><a href="#skills" onclick="scrollToSection('skills')">Skills</a></li>
-                <li><a href="#game" onclick="scrollToSection('game')">Game</a></li>
-                <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+                <li><a href="#welcome">Welcome</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#game">Game</a></li>
             </ul>
         </nav>
     </header>
@@ -30,8 +29,19 @@
                 <div class="hero-image">
                     <img src="images/headshot.jpg" alt="Jack's headshot" />
                 </div>
-                <p><!-- Add your intro text here --></p>
             </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h1>If you want to chat...<br></h1>
+            <div class="contact-links">
+                <a style="font-size: 30px;" href="mailto:jackhroberts02@gmail.com" class="contact-link">Email</a>
+                <a style="font-size: 30px;" href="https://linkedin.com/in/jack-h-roberts/" class="contact-link" target="_blank">LinkedIn</a>
+                <a style="font-size: 30px;" href="https://github.com/Jack-H-Roberts" class="contact-link" target="_blank">GitHub</a>
+                <a style="font-size: 30px;" href="Resume.html" class="contact-link">Resume</a>
+            </div>
+            <h1><br><br>Otherwise, check out my work!</h1>
         </section>
 
         <!-- Timeline Section -->
@@ -64,7 +74,7 @@
                 </div>
 
                 <!-- Furman Engaged 2025 Project -->
-                <div class="timeline-item left">
+                <div class="timeline-item left" id="FurmanEngaged2025">
                     <div class="timeline-content clickable" onclick="location.href='projects/FurmanEngaged2025.html'">
                         <div class="click-indicator">VIEW</div>
                         <div class="content-image">
@@ -75,17 +85,17 @@
                         <div class="content-description">Presentation to the student body on my research with Walt Disney World Resort from May 2024. Improved seating efficiency on the Tower of Terror ride by 5%, translating to an additional $20.8M per year in ticket sales.</div>
                         <div class="content-date">April 2025</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('R')">R</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Python')">Python</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('JavaScript')">JavaScript</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('HTML/CSS')">HTML/CSS</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('GGPlot2')">GGPlot2</span>
+                            <span class="skill-pill" data-skill="R">R</span>
+                            <span class="skill-pill" data-skill="Python">Python</span>
+                            <span class="skill-pill" data-skill="JavaScript">JavaScript</span>
+                            <span class="skill-pill" data-skill="HTML/CSS">HTML/CSS</span>
+                            <span class="skill-pill" data-skill="GGPlot2">GGPlot2</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- DataFest 2025 Project -->
-                <div class="timeline-item right">
+                <div class="timeline-item right" id="DataFest2025">
                     <div class="timeline-content clickable" onclick="location.href='projects/DataFest2025.html'">
                         <div class="click-indicator">VIEW</div>
                         <div class="content-image">
@@ -96,10 +106,10 @@
                         <div class="content-description">Weekend-long data analytics competition against students from Furman and Emory. Won "Best Visualization" with two teammates.</div>
                         <div class="content-date">April 2025</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Python')">Python</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Matplotlib')">Matplotlib</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Pandas')">Pandas</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Excel')">Excel</span>
+                            <span class="skill-pill" data-skill="Python">Python</span>
+                            <span class="skill-pill" data-skill="Matplotlib">Matplotlib</span>
+                            <span class="skill-pill" data-skill="Pandas">Pandas</span>
+                            <span class="skill-pill" data-skill="Excel">Excel</span>
                         </div>
                     </div>
                 </div>
@@ -109,64 +119,79 @@
                     <div class="year-marker">2024</div>
                 </div>
 
-                <!-- Greenville Spotlight Project -->
+                <!-- Greenville Spotlight -->
                 <div class="timeline-item left">
-                    <div class="timeline-content clickable" onclick="location.href='projects/GreenvilleSpotlight.html'">
-                        <div class="click-indicator">VIEW</div>
-                        <div class="content-image">
-                            <img src="images/projects/GreenvilleSpotlight.png" alt="Greenville Spotlight">
+                    <a href="https://github.com/Jack-H-Roberts/CSC-342-Restaurant-Website" target="_blank" rel="noopener noreferrer">
+                        <div class="timeline-content clickable">
+                            <div class="click-indicator">VIEW</div>
+                            <div class="content-image">
+                                <img src="images/projects/GreenvilleSpotlight.png" alt="Greenville Spotlight">
+                            </div>
+                            <div class="content-title">Greenville Spotlight</div>
+                            <div class="content-subtitle">Furman University</div>
+                            <div class="content-description">
+                                Developed a restaurant review website as part of CSC-342. 
+                                Implemented both front-end and back-end functionality 
+                                including user authentication, review submission, and dynamic 
+                                content rendering.
+                            </div>
+                            <div class="content-date">April 2024</div>
+                            <div class="skill-pills">
+                                <span class="skill-pill" data-skill="HTML/CSS">HTML/CSS</span>
+                                <span class="skill-pill" data-skill="JavaScript">JavaScript</span>
+                                <span class="skill-pill" data-skill="Flask">Flask</span>
+                                <span class="skill-pill" data-skill="SQL">SQL</span>
+                            </div>
                         </div>
-                        <div class="content-title">Greenville Spotlight</div>
-                        <div class="content-subtitle">Furman University</div>
-                        <div class="content-description">Semester-long project for my <em>Web Design and Development</em> course. Used the Yelp API to locate and classify restaurants in Greenville, SC for easy searching. Worked with 3 teammates.</div>
-                        <div class="content-date">December 2024</div>
-                        <div class="skill-pills">
-                            <span class="skill-pill" onclick="scrollToSkills('Flask')">Flask</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Bash')">Bash</span>
-                            <span class="skill-pill" onclick="scrollToSkills('JavaScript')">JavaScript</span>
-                            <span class="skill-pill" onclick="scrollToSkills('HTML/CSS')">HTML/CSS</span>
-                            <span class="skill-pill" onclick="scrollToSkills('APIs')">APIs</span>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Data Mania 2024 Project -->
                 <div class="timeline-item right">
-                    <div class="timeline-content clickable" onclick="location.href='projects/DataMania2024.html'">
-                        <div class="click-indicator">VIEW</div>
-                        <div class="content-image">
-                            <img src="images/projects/DataMania2024.png" alt="Data Mania 2024">
+                    <a href="https://github.com/Jack-H-Roberts/Data-Mania" target="_blank" rel="noopener noreferrer">
+                        <div class="timeline-content clickable">
+                            <div class="click-indicator">VIEW</div>
+                            <div class="content-image">
+                                <img src="images/projects/DataMania2024.png" alt="Data Mania 2024">
+                            </div>
+                            <div class="content-title">Data Mania 2024</div>
+                            <div class="content-subtitle">Furman University</div>
+                            <div class="content-description">Weekend-long data analytics competition against students from Furman. Won "Best Story" with one teammate.</div>
+                            <div class="content-date">November 2024</div>
+                            <div class="skill-pills">
+                                <span class="skill-pill" data-skill="Python">Python</span>
+                                <span class="skill-pill" data-skill="Matplotlib">Matplotlib</span>
+                                <span class="skill-pill" data-skill="Tableau">Tableau</span>
+                            </div>
                         </div>
-                        <div class="content-title">Data Mania 2024</div>
-                        <div class="content-subtitle">Furman University</div>
-                        <div class="content-description">Weekend-long data analytics competition against students from Furman. Won "Best Story" with one teammate.</div>
-                        <div class="content-date">November 2024</div>
-                        <div class="skill-pills">
-                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Matplotlib')">Matplotlib</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Tableau')">Tableau</span>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Chess Match Analysis -->
                 <div class="timeline-item left">
-                    <div class="timeline-content clickable" onclick="location.href='projects/ChessMatchAnalysis.html'">
-                        <div class="click-indicator">VIEW</div>
-                        <div class="content-image">
-                            <img src="images/projects/ChessMatchAnalysis.png" alt="Chess Match Analysis">
+                    <a href="https://github.com/Jack-H-Roberts/ChessAnalytics" target="_blank" rel="noopener noreferrer">
+                        <div class="timeline-content clickable">
+                            <div class="click-indicator">VIEW</div>
+                            <div class="content-image">
+                                <img src="images/projects/ChessMatchAnalysis.png" alt="Chess Match Analysis">
+                            </div>
+                            <div class="content-title">Chess Match Analysis</div>
+                            <div class="content-subtitle">Independent</div>
+                            <div class="content-description">
+                                Engineered 40 features from 3500 personal chess games using 
+                                the Chess.com API to predict the outcomes of my games with 
+                                XGBoost. Identified loss-prone patterns and achieved a 15% 
+                                increase in my win percentage.
+                            </div>
+                            <div class="content-date">September 2024</div>
+                            <div class="skill-pills">
+                                <span class="skill-pill" data-skill="Python">Python</span>
+                                <span class="skill-pill" data-skill="Pandas">Pandas</span>
+                                <span class="skill-pill" data-skill="Matplotlib">Matplotlib</span>
+                                <span class="skill-pill" data-skill="XGBoost">XGBoost</span>
+                            </div>
                         </div>
-                        <div class="content-title">Chess Match Analysis</div>
-                        <div class="content-subtitle">Independent</div>
-                        <div class="content-description">Engineered 40 features from 3500 personal chess games using the Chess.com API to predict the outcomes of my games with XGBoost. Identified loss-prone patterns and achieved a 15% increase in my win percentage.</div>
-                        <div class="content-date">September 2024</div>
-                        <div class="skill-pills">
-                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Pandas')">Pandas</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Matplotlib')">Matplotlib</span>
-                            <span class="skill-pill" onclick="scrollToSkills('XGBoost')">XGBoost</span>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- BMW Research Position -->
@@ -180,10 +205,10 @@
                         <div class="content-description">Uncovered discrepancies between internal defect reporting datasets and launched a Flask-based website for forecasting assembly line bottlenecks in real-time to minimize downtime.</div>
                         <div class="content-date">August 2024 - May 2025</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="scrollToSkills('Flask')">Flask</span>
-                            <span class="skill-pill" onclick="scrollToSkills('JavaScript')">JavaScript</span>
-                            <span class="skill-pill" onclick="scrollToSkills('HTML/CSS')">HTML/CSS</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Model Deployment')">Model Deployment</span>
+                            <span class="skill-pill" data-skill="Flask">Flask</span>
+                            <span class="skill-pill" data-skill="JavaScript">JavaScript</span>
+                            <span class="skill-pill" data-skill="HTML/CSS">HTML/CSS</span>
+                            <span class="skill-pill" data-skill="Model Deployment">Model Deployment</span>
                         </div>
                     </div>
                 </div>
@@ -199,8 +224,8 @@
                         <div class="content-description">Collected 1100 data points on Tower of Terror seating patterns to model 7 seating strategies. Presented human-implementable strategy that increased efficiency by 5%, adding 480 riders per day.</div>
                         <div class="content-date">May 2024</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="scrollToSkills('R')">R</span>
-                            <span class="skill-pill" onclick="scrollToSkills('GGPlot2')">GGPlot2</span>
+                            <span class="skill-pill" data-skill="R">R</span>
+                            <span class="skill-pill" data-skill="GGPlot2">GGPlot2</span>
                         </div>
                     </div>
                 </div>
@@ -216,19 +241,19 @@
                         <div class="content-description">Consolidated 7 datasets with SQL and Python to analyze market share and forecast revenue through 2027. Built Tableau dashboards for Q3 earnings report and discovered $100M in additional addressable markets.</div>
                         <div class="content-date">April 2024 - August 2025</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="scrollToSkills('SQL')">SQL</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Pandas')">Pandas</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Matplotlib')">Matplotlib</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Excel')">Excel</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Tableau')">Tableau</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Data Pipelining')">Data Pipelining</span>
+                            <span class="skill-pill" data-skill="SQL">SQL</span>
+                            <span class="skill-pill" data-skill="Python">Python</span>
+                            <span class="skill-pill" data-skill="Pandas">Pandas</span>
+                            <span class="skill-pill" data-skill="Matplotlib">Matplotlib</span>
+                            <span class="skill-pill" data-skill="Excel">Excel</span>
+                            <span class="skill-pill" data-skill="Tableau">Tableau</span>
+                            <span class="skill-pill" data-skill="Data Pipelining">Data Pipelining</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Furman Engaged 2024 Project -->
-                <div class="timeline-item left">
+                <div class="timeline-item left" id="FurmanEngaged2024">
                     <div class="timeline-content clickable" onclick="location.href='projects/FurmanEngaged2024.html'">
                         <div class="click-indicator">VIEW</div>
                         <div class="content-image">
@@ -239,18 +264,17 @@
                         <div class="content-description">Presentation to the student body on my research on factors affecting diastolic blood pressure of pregnant women. Challenged traditional indicators of maternal health such as age and blood sugar, while idenitifying body temperature as an underappreciated factor.</div>
                         <div class="content-date">April 2024</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('R')">R</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Tidyverse')">Tidyverse</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('GGPlot2')">GGPlot2</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Data Visualization')">Data Visualization</span>
+                            <span class="skill-pill" data-skill="R">R</span>
+                            <span class="skill-pill" data-skill="Tidyverse">Tidyverse</span>
+                            <span class="skill-pill" data-skill="GGPlot2">GGPlot2</span>
+                            <span class="skill-pill" data-skill="Data Visualization">Data Visualization</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- DataFest 2024 Project -->
                 <div class="timeline-item right">
-                    <div class="timeline-content clickable" onclick="location.href='projects/DataFest2024.html'">
-                        <div class="click-indicator">VIEW</div>
+                    <div class="timeline-content">
                         <div class="content-image">
                             <img src="images/projects/DataFest2024.png" alt="DataFest 2024">
                         </div>
@@ -259,10 +283,10 @@
                         <div class="content-description">Weekend-long data analytics competition against students from Furman and Wake Forest. Finalist with three teammates.</div>
                         <div class="content-date">April 2024</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="scrollToSkills('Python')">Python</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Pandas')">Pandas</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Matplotlib')">Matplotlib</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Excel')">Excel</span>
+                            <span class="skill-pill" data-skill="Python">Python</span>
+                            <span class="skill-pill" data-skill="Pandas">Pandas</span>
+                            <span class="skill-pill" data-skill="Matplotlib">Matplotlib</span>
+                            <span class="skill-pill" data-skill="Excel">Excel</span>
                         </div>
                     </div>
                 </div>
@@ -273,7 +297,7 @@
                 </div>
 
                 <!-- Maternal Health Risk Prediction -->
-                <div class="timeline-item left">
+                <div class="timeline-item left" id="MaternalHealthRiskPrediction">
                     <div class="timeline-content clickable" onclick="location.href='projects/MaternalHealthRiskPrediction.html'">
                         <div class="click-indicator">VIEW</div>
                         <div class="content-image">
@@ -281,14 +305,13 @@
                         </div>
                         <div class="content-title">Maternal Health Risk Prediction</div>
                         <div class="content-subtitle">Furman University</div>
-                        <div class="content-description"><em>Statistics in R</em> final project analyzing Kaggle dataset of 1200 pregnant women using 8 regression models including Ridge and LASSO. Data pipeline built in R. Co-authored 40-page LaTeX report and presented to technical and non-technical audiences.</div>
+                        <div class="content-description"><em>Statistics in R</em> final project analyzing Kaggle dataset of 1200 pregnant women using 8 regression models including Ridge and LASSO. Data pipeline built in R. Co-authored 40-page report and presented to technical and non-technical audiences.</div>
                         <div class="content-date">December 2023</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('R')">R</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('LaTeX')">LaTeX</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Tidyverse')">Tidyverse</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('GGPlot2')">GGPlot2</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Data Pipelining')">Data Pipelining</span>
+                            <span class="skill-pill" data-skill="R">R</span>
+                            <span class="skill-pill" data-skill="Tidyverse">Tidyverse</span>
+                            <span class="skill-pill" data-skill="GGPlot2">GGPlot2</span>
+                            <span class="skill-pill" data-skill="Data Pipelining">Data Pipelining</span>
                         </div>
                     </div>
                 </div>
@@ -304,8 +327,8 @@
                         <div class="content-description">Combined and cleaned monthly sales summaries to explore relationships between quantity sold, location, payment type, and revenue composition. Presented findings to management for business decision support.</div>
                         <div class="content-date">July 2023 - September 2023</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="scrollToSkills('Excel')">Excel</span>
-                            <span class="skill-pill" onclick="scrollToSkills('Tableau')">Tableau</span>
+                            <span class="skill-pill" data-skill="Excel">Excel</span>
+                            <span class="skill-pill" data-skill="Tableau">Tableau</span>
                         </div>
                     </div>
                 </div>
@@ -316,7 +339,7 @@
                 </div>
 
                 <!-- Spotify Success Prediction -->
-                <div class="timeline-item left">
+                <div class="timeline-item left" id="SpotifySuccessPrediction">
                     <div class="timeline-content clickable" onclick="location.href='projects/SpotifySuccessPrediction.html'">
                         <div class="click-indicator">VIEW</div>
                         <div class="content-image">
@@ -327,10 +350,10 @@
                         <div class="content-description">Machine learning project analyzing Spotify track features to predict song success metrics. Applied classification algorithms and feature engineering techniques to identify key factors in music popularity.</div>
                         <div class="content-date">December 2021</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('R')">R</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Tidyverse')">Tidyverse</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('GGPlot2')">GGPlot2</span>
-                            <span class="skill-pill" onclick="event.stopPropagation(); scrollToSkills('Feature Selection')">Feature Selection</span>
+                            <span class="skill-pill" data-skill="R">R</span>
+                            <span class="skill-pill" data-skill="Tidyverse">Tidyverse</span>
+                            <span class="skill-pill" data-skill="GGPlot2">GGPlot2</span>
+                            <span class="skill-pill" data-skill="Feature Selection">Feature Selection</span>
                         </div>
                     </div>
                 </div>
@@ -346,7 +369,7 @@
                         <div class="content-description">Developed marketing campaigns resulting in 100% increase of professional LinkedIn connections. Curated client lists based on business requirements, increasing direct mailing list by 30%.</div>
                         <div class="content-date">June 2021 - Present</div>
                         <div class="skill-pills">
-                            <span class="skill-pill" onclick="scrollToSkills('Excel')">Excel</span>
+                            <span class="skill-pill" data-skill="Excel">Excel</span>
                         </div>
                     </div>
                 </div>
@@ -370,128 +393,79 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card" onclick="window.location.href='projects/FurmanEngaged2025.html'">
-                    <div class="project-image"><img src="images/projects/FurmanEngaged2025.png" alt="Furman Engaged 2025 Image" /></div>
-                    <h3>Furman Engaged 2025</h3>
-                    <p>Disney research presented to Furman campus in April 2025.</p>
-                </div>
-                <div class="project-card" onclick="window.location.href='projects/FurmanEngaged2024.html'">
-                    <div class="project-image"><img src="images/projects/FurmanEngaged2024.png" alt="Furman Engaged 2024 Image" /></div>
-                    <h3>Furman Engaged 2024</h3>
-                    <p>Maternal Health Risk Prediction project presented to Furman campus in April 2024.</p>
-                </div>
-                <div class="project-card" onclick="window.location.href='projects/MaternalHealthRiskPrediction.html'">
-                    <div class="project-image"><img src="images/projects/MaternalHealthRiskPrediction.png" alt="Maternal Health Risk Prediction Image" /></div>
-                    <h3>Maternal Health Risk Prediction</h3>
-                    <p>Semester-long analytics project from <i>Statistics in R I</i> presented in December 2023.</p>
-                </div>
-                <div class="project-card" onclick="window.location.href='projects/ChessMatchAnalysis.html'">
-                    <div class="project-image"><img src="images/projects/ChessMatchAnalysis.png" alt="Chess Match Analysis Image" /></div>
-                    <h3>Chess Match Analysis</h3>
-                    <p>Personal analytics project to learn more about the factors that affect my chess win percentage.</p>
-                </div>
-                <div class="project-card" onclick="window.location.href='projects/DataFest2025.html'">
-                    <div class="project-image"><img src="images/projects/DataFest2025.png" alt="DataFest 2025 Image" /></div>
-                    <h3>DataFest 2025</h3>
-                    <p>Data analytics competition against Emory and Furman students in April 2025.</p>
-                </div>
-                <div class="project-card" onclick="window.location.href='projects/DataFest2024.html'">
-                    <div class="project-image"><img src="images/projects/DataFest2024.png" alt="DataFest 2024 Image" /></div>
-                    <h3>DataFest 2024</h3>
-                    <p>Data analytics competition against Wake Forest and Furman students in April 2024.</p>
-                </div>
-                <div class="project-card" onclick="window.location.href='projects/DataMania2024.html'">
-                    <div class="project-image"><img src="images/projects/DataMania2024.png" alt="Data Mania 2024 Image" /></div>
-                    <h3>DataMania 2024</h3>
-                    <p>Data analytics competition against Furman students in November 2024.</p>
-                </div>
-                <div class="project-card" onclick="window.location.href='projects/GreenvilleSpotlight.html'">
-                    <div class="project-image"><img src="images/projects/GreenvilleSpotlight.png" alt="Greenville Spotlight Image" /></div>
-                    <h3>Greenville Spotlight</h3>
-                    <p>Semester-long web development project from <i>Web Design & Development</i> presented in December 2024.</p>
-                </div>
-                <div class="project-card" onclick="window.location.href='projects/SpotifySuccessPrediction.html'">
-                    <div class="project-image"><img src="images/projects/SpotifySuccessPrediction.png" alt="Spotify Success Prediction Image" /></div>
-                    <h3>Spotify Success Prediction</h3>
-                    <p>Final project from <i>Intro to Data Mining</i> analyzing the factors that predict a song's success on Spotify.</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Skills Section -->
         <section id="skills">
             <h2>Skills</h2>
             <div class="skills-grid">
-                <!-- Languages-->
-                <div class="skills-category">
-                    <h3>💻 Languages</h3>
-                    <div class="skills-grid-inner">
-                        <div class="skill-card">Python</div>
-                        <div class="skill-card">R</div>
-                        <div class="skill-card">SQL</div>
-                        <div class="skill-card">Java</div>
-                        <div class="skill-card">JavaScript</div>
-                        <div class="skill-card">HTML/CSS</div>
-                        <div class="skill-card">Bash</div>
-                        <div class="skill-card">Powershell</div>
-                        <div class="skill-card">LaTeX</div>
+                <!-- Column 1: Software, Languages, Libraries -->
+                <div class="skills-column">
+                    <!-- Software-->
+                    <div class="skills-category">
+                        <h3>🛠️ Software</h3>
+                        <div class="skills-grid-inner">
+                            <div class="skill-card">Tableau</div>
+                            <div class="skill-card">Excel</div>
+                            <div class="skill-card">GitHub</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Languages-->
+                    <div class="skills-category">
+                        <h3>💻 Languages</h3>
+                        <div class="skills-grid-inner">
+                            <div class="skill-card">Python</div>
+                            <div class="skill-card">R</div>
+                            <div class="skill-card">SQL</div>
+                            <div class="skill-card">Java</div>
+                            <div class="skill-card">JavaScript</div>
+                            <div class="skill-card">HTML/CSS</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Libraries-->
+                    <div class="skills-category">
+                        <h3>📚 Libraries & Frameworks</h3>
+                        <div class="skills-grid-inner">
+                            <div class="skill-card">Pandas</div>
+                            <div class="skill-card">Matplotlib</div>
+                            <div class="skill-card">Flask</div>
+                            <div class="skill-card">TensorFlow</div>
+                            <div class="skill-card">Scikit-learn</div>
+                            <div class="skill-card">SciPy</div>
+                            <div class="skill-card">XGBoost</div>
+                            <div class="skill-card">Tidyverse</div>
+                            <div class="skill-card">GGPlot2</div>
+
+
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Software-->
-                <div class="skills-category">
-                    <h3>🛠️ Software</h3>
-                    <div class="skills-grid-inner">
-                        <div class="skill-card">Tableau</div>
-                        <div class="skill-card">Excel</div>
-                        <div class="skill-card">GitHub</div>
-                        <div class="skill-card">Jupyter</div>
-                        <div class="skill-card">Google Colab</div>
-                        <div class="skill-card">VS Code</div>
-                        <div class="skill-card">RStudio</div>
-                    </div>
-                </div>
-                
-                <!-- Libraries-->
-                <div class="skills-category">
-                    <h3>📚 Libraries & Frameworks</h3>
-                    <div class="skills-grid-inner">
-                        <div class="skill-card">PyTorch</div>
-                        <div class="skill-card">TensorFlow</div>
-                        <div class="skill-card">Pandas</div>
-                        <div class="skill-card">Scikit-Learn</div>
-                        <div class="skill-card">Matplotlib</div>
-                        <div class="skill-card">Flask</div>
-                        <div class="skill-card">Tidyverse</div>
-                        <div class="skill-card">GGPlot2</div>
-                        <div class="skill-card">xTable</div>
-                        <div class="skill-card">XGBoost</div>
-                        <div class="skill-card">Joblib</div>
-                        <div class="skill-card">JUnit</div>
-                        <div class="skill-card">Fetch</div>
-                        <div class="skill-card">Requests</div>
-                    </div>
-                </div>
-                
-                <!-- Technical Experience-->
-                <div class="skills-category">
-                    <h3>⚡ Technical Experience</h3>
-                    <div class="skills-grid-inner">
-                        <div class="skill-card">APIs</div>
-                        <div class="skill-card">Exploratory Analysis</div>
-                        <div class="skill-card">Data Pipelining</div>
-                        <div class="skill-card">Feature Selection</div>
-                        <div class="skill-card">Model Selection</div>
-                        <div class="skill-card">Statistical Tests</div>
-                        <div class="skill-card">Model Deployment</div>
-                        <div class="skill-card">Data Visualization</div>
-                        <div class="skill-card">Multi-threading</div>
-                        <div class="skill-card">Web Development</div>
-                        <div class="skill-card">Unit Testing</div>
+                <!-- Column 2: Technical Experience -->
+                <div class="skills-column">
+                    <!-- Technical Experience-->
+                    <div class="skills-category skills-category-full-height">
+                        <h3>⚡ Technical Experience</h3>
+                        <div class="skills-grid-inner">
+                            <div class="skill-card">Exploratory Analysis</div>
+                            <div class="skill-card">Data Pipelining</div>
+                            <div class="skill-card">Feature Selection</div>
+                            <div class="skill-card">Model Selection</div>
+                            <div class="skill-card">Linear Regression</div>
+                            <div class="skill-card">Logistic Regression</div>
+                            <div class="skill-card">Decision Trees</div>
+                            <div class="skill-card">Nueral Networks</div>
+                            <div class="skill-card">Transformers</div>
+                            <div class="skill-card">Statistical Tests</div>
+                            <div class="skill-card">Model Deployment</div>
+                            <div class="skill-card">Data Visualization</div>
+                            <div class="skill-card">Technical Presentations</div>
+                            <div class="skill-card">Non-Technical Presentations</div>
+                            <div class="skill-card">Multi-threading</div>
+                            <div class="skill-card">Web Development</div>
+                            <div class="skill-card">REST API</div>
+                            <div class="skill-card">Unit Testing</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -517,16 +491,7 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Let's Chat</h2>
-            <div class="contact-links">
-                <a style="font-size: 30px;" href="mailto:jackhroberts02@gmail.com" class="contact-link">Email</a>
-                <a style="font-size: 30px;" href="https://linkedin.com/in/jack-h-roberts/" class="contact-link" target="_blank">LinkedIn</a>
-                <a style="font-size: 30px;" href="https://github.com/Jack-H-Roberts" class="contact-link" target="_blank">GitHub</a>
-                <a style="font-size: 30px;" href="Resume.html" class="contact-link">Resume</a>
-            </div>
-        </section>
+        <img src="images/DataFest2025Pic.jpg" alt="DataFest 2025 Presentation" width="40%" height="40%" style="display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
     </div>
 
     <!-- Footer -->
