@@ -736,6 +736,58 @@ h2 {
     border-color: #4caf50;
 }
 
+/* Data Engineering & Cloud */
+.timeline-content .skill-pill[data-skill="AWS"] {
+    background-color: #ff9900;
+    border-color: #ff9900;
+    color: #000;
+}
+
+.timeline-content .skill-pill[data-skill="Databricks"] {
+    background-color: #ff3621;
+    border-color: #ff3621;
+}
+
+.timeline-content .skill-pill[data-skill="Delta Lake"] {
+    background-color: #00b4d8;
+    border-color: #00b4d8;
+}
+
+.timeline-content .skill-pill[data-skill="PostgreSQL"] {
+    background-color: #336791;
+    border-color: #336791;
+}
+
+.timeline-content .skill-pill[data-skill="DBML"] {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.timeline-content .skill-pill[data-skill="Data Modeling"] {
+    background-color: #5c6bc0;
+    border-color: #5c6bc0;
+}
+
+.timeline-content .skill-pill[data-skill="Data Quality"] {
+    background-color: #26a69a;
+    border-color: #26a69a;
+}
+
+.timeline-content .skill-pill[data-skill="Salesforce"] {
+    background-color: #00a1e0;
+    border-color: #00a1e0;
+}
+
+.timeline-content .skill-pill[data-skill="Leaflet"] {
+    background-color: #199900;
+    border-color: #199900;
+}
+
+.timeline-content .skill-pill[data-skill="REST APIs"] {
+    background-color: #ff5722;
+    border-color: #ff5722;
+}
+
 /* Click Indicator */
 .click-indicator {
     position: absolute;

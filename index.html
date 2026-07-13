@@ -74,8 +74,31 @@
                     <div class="year-marker">2026</div>
                 </div>
 
-                <!-- Chess Data Pipeline and Analysis -->
+                <!-- Shoals Technologies Group -->
                 <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="content-image">
+                            <img src="images/thumbnails/ShoalsThumbnail.png" alt="Shoals Technologies Group">
+                        </div>
+                        <div class="content-title">Data Analyst</div>
+                        <div class="content-subtitle">Shoals Technologies Group</div>
+                        <div class="content-description">Data liaison on a company-wide CPQ/CRM/ERP modernization, designing a 300+ table enterprise data model (DBML) and a bitemporal PostgreSQL source of truth.</div>
+                        <div class="content-date">April 2024 – Present</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" data-skill="SQL">SQL</span>
+                            <span class="skill-pill" data-skill="Python">Python</span>
+                            <span class="skill-pill" data-skill="DBML">DBML</span>
+                            <span class="skill-pill" data-skill="PostgreSQL">PostgreSQL</span>
+                            <span class="skill-pill" data-skill="Data Modeling">Data Modeling</span>
+                            <span class="skill-pill" data-skill="Data Quality">Data Quality</span>
+                            <span class="skill-pill" data-skill="Salesforce">Salesforce</span>
+                            <span class="skill-pill" data-skill="Tableau">Tableau</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chess Data Pipeline and Analysis -->
+                <div class="timeline-item right">
                     <a href="https://github.com/Jack-H-Roberts/Chess-Analytics-Pipeline-and-Dashboard" target="_blank" rel="noopener noreferrer">
                         <div class="timeline-content clickable">
                             <div class="click-indicator">GitHub →</div>
@@ -84,14 +107,14 @@
                             </div>
                             <div class="content-title">Chess Data Pipeline and Analysis</div>
                             <div class="content-subtitle">Personal Project</div>
-                            <div class="content-description">Rebuilt my 2024 chess analysis as a governed data pipeline. A scheduled ingestion service (AWS Lambda, EventBridge, S3) lands 3,500+ games of my match history from the Chess.com API as raw JSON for monthly incremental loads. Game- and move-level bronze/silver/gold Delta tables in Databricks — deduplicated, quality-checked, and orchestrated by a scheduled Lakeflow job with failure alerts — feed a Databricks SQL dashboard of Elo progression and win rates, plus an XGBoost win-prediction model rebuilt on the 48-feature gold layer.</div>
+                            <div class="content-description">Rebuilt my chess analysis as a governed pipeline: AWS ingestion of 3,500+ Chess.com games into Databricks bronze/silver/gold Delta tables feeding a dashboard and 48-feature XGBoost model.</div>
                             <div class="content-date">Jul. 2026 – Present</div>
                             <div class="skill-pills">
-                                <span class="skill-pill" data-skill="Python">Python</span>
-                                <span class="skill-pill" data-skill="SQL">SQL</span>
-                                <span class="skill-pill" data-skill="AWS">AWS</span>
                                 <span class="skill-pill" data-skill="Databricks">Databricks</span>
+                                <span class="skill-pill" data-skill="AWS">AWS</span>
                                 <span class="skill-pill" data-skill="Delta Lake">Delta Lake</span>
+                                <span class="skill-pill" data-skill="SQL">SQL</span>
+                                <span class="skill-pill" data-skill="Python">Python</span>
                                 <span class="skill-pill" data-skill="XGBoost">XGBoost</span>
                             </div>
                         </div>
@@ -103,31 +126,8 @@
                     <div class="year-marker">2025</div>
                 </div>
 
-                <!-- Shoals Technologies Group -->
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="content-image">
-                            <img src="images/thumbnails/ShoalsThumbnail.png" alt="Shoals Technologies Group">
-                        </div>
-                        <div class="content-title">Data Analyst</div>
-                        <div class="content-subtitle">Shoals Technologies Group</div>
-                        <div class="content-description">Serve as data liaison on a company-wide systems modernization (CPQ, CRM, ERP), designing the future-state enterprise data model (300+ tables, DBML) and a strictly typed, bitemporal PostgreSQL proof-of-concept that migrates a legacy ERP, Salesforce, and ungoverned spreadsheets into one governed source of truth. Own the data-quality and validation layer for a new CPQ part-creation tool (saving ~40 staff-hours per week) and drive the platform lifecycle end to end — requirements, hands-on validation, and triage of thousands of bugs and change requests. Previously engineered a SQL/Python pipeline consolidating 7 data sources into a market-share model that surfaced $100M/yr in unquoted addressable markets, solo-presented to the C-suite and handed off to finance for quarterly refreshes.</div>
-                        <div class="content-date">April 2024 – Present</div>
-                        <div class="skill-pills">
-                            <span class="skill-pill" data-skill="SQL">SQL</span>
-                            <span class="skill-pill" data-skill="Python">Python</span>
-                            <span class="skill-pill" data-skill="DBML">DBML</span>
-                            <span class="skill-pill" data-skill="PostgreSQL">PostgreSQL</span>
-                            <span class="skill-pill" data-skill="Salesforce">Salesforce</span>
-                            <span class="skill-pill" data-skill="Tableau">Tableau</span>
-                            <span class="skill-pill" data-skill="Data Modeling">Data Modeling</span>
-                            <span class="skill-pill" data-skill="Data Quality">Data Quality</span>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Furman Engaged 2025 Project -->
-                <div class="timeline-item right" id="FurmanEngaged2025">
+                <div class="timeline-item left" id="FurmanEngaged2025">
                     <div class="timeline-content clickable" onclick="location.href='projects/FurmanEngaged2025.html'">
                         <div class="click-indicator">VIEW PDF</div>
                         <div class="content-image">
@@ -148,7 +148,7 @@
                 </div>
 
                 <!-- DataFest 2025 Project -->
-                <div class="timeline-item left" id="DataFest2025">
+                <div class="timeline-item right" id="DataFest2025">
                     <div class="timeline-content clickable" onclick="location.href='projects/DataFest2025.html'">
                         <div class="click-indicator">VIEW PDF</div>
                         <div class="content-image">
@@ -173,7 +173,7 @@
                 </div>
 
                 <!-- Greenville Spotlight -->
-                <div class="timeline-item right">
+                <div class="timeline-item left">
                     <a href="https://github.com/Jack-H-Roberts/CSC-342-Restaurant-Website" target="_blank" rel="noopener noreferrer">
                         <div class="timeline-content clickable">
                             <div class="click-indicator">GitHub →</div>
@@ -200,7 +200,7 @@
                 </div>
 
                 <!-- Data Mania 2024 Project -->
-                <div class="timeline-item left">
+                <div class="timeline-item right">
                     <a href="https://github.com/Jack-H-Roberts/Data-Mania" target="_blank" rel="noopener noreferrer">
                         <div class="timeline-content clickable">
                             <div class="click-indicator">GitHub →</div>
@@ -221,7 +221,7 @@
                 </div>
 
                 <!-- Chess Match Analysis -->
-                <div class="timeline-item right">
+                <div class="timeline-item left">
                     <a href="https://github.com/Jack-H-Roberts/ChessAnalytics" target="_blank" rel="noopener noreferrer">
                         <div class="timeline-content clickable">
                             <div class="click-indicator">GitHub →</div>
@@ -249,7 +249,7 @@
                 </div>
 
                 <!-- BMW Research Position -->
-                <div class="timeline-item left">
+                <div class="timeline-item right">
                     <div class="timeline-content">
                         <div class="content-image">
                             <img src="images/thumbnails/BMWThumbnail.png" alt="BMW Group Research">
@@ -268,7 +268,7 @@
                 </div>
 
                 <!-- Disney Research Position -->
-                <div class="timeline-item right">
+                <div class="timeline-item left">
                     <div class="timeline-content">
                         <div class="content-image">
                             <img src="images/thumbnails/DisneyThumbnail.png" alt="The Walt Disney Company">
@@ -286,7 +286,7 @@
 
 
                 <!-- Furman Engaged 2024 Project -->
-                <div class="timeline-item left" id="FurmanEngaged2024">
+                <div class="timeline-item right" id="FurmanEngaged2024">
                     <div class="timeline-content clickable" onclick="location.href='projects/FurmanEngaged2024.html'">
                         <div class="click-indicator">VIEW PDF</div>
                         <div class="content-image">
@@ -306,7 +306,7 @@
                 </div>
 
                 <!-- DataFest 2024 Project -->
-                <div class="timeline-item right">
+                <div class="timeline-item left">
                     <div class="timeline-content">
                         <div class="content-image">
                             <img src="images/projects/DataFest2024.png" alt="DataFest 2024">
@@ -330,7 +330,7 @@
                 </div>
 
                 <!-- Maternal Health Risk Prediction -->
-                <div class="timeline-item left" id="MaternalHealthRiskPrediction">
+                <div class="timeline-item right" id="MaternalHealthRiskPrediction">
                     <div class="timeline-content clickable" onclick="location.href='projects/MaternalHealthRiskPrediction.html'">
                         <div class="click-indicator">VIEW PDF</div>
                         <div class="content-image">
@@ -350,7 +350,7 @@
                 </div>
 
                 <!-- Sales Data Analyst Position -->
-                <div class="timeline-item right">
+                <div class="timeline-item left">
                     <div class="timeline-content">
                         <div class="content-image">
                             <img src="images/thumbnails/CampsThumbnail.png" alt="Camps Kitchen and Bar">
@@ -372,7 +372,7 @@
                 </div>
 
                 <!-- Spotify Success Prediction -->
-                <div class="timeline-item left" id="SpotifySuccessPrediction">
+                <div class="timeline-item right" id="SpotifySuccessPrediction">
                     <div class="timeline-content clickable" onclick="location.href='projects/SpotifySuccessPrediction.html'">
                         <div class="click-indicator">VIEW PDF</div>
                         <div class="content-image">
@@ -392,7 +392,7 @@
                 </div>
 
                 <!-- Belvedere Position -->
-                <div class="timeline-item right">
+                <div class="timeline-item left">
                     <div class="timeline-content">
                         <div class="content-image">
                             <img src="images/thumbnails/BelvedereThumbnail.png" alt="Belvedere Direct Lending Advisors">
@@ -436,12 +436,11 @@
                     <div class="skills-category">
                         <h3>🛠️ Software</h3>
                         <div class="skills-grid-inner">
-                            <div class="skill-card">Tableau</div>
-                            <div class="skill-card">Excel</div>
-                            <div class="skill-card">GitHub</div>
-                            <div class="skill-card">Salesforce</div>
                             <div class="skill-card">Databricks</div>
                             <div class="skill-card">AWS</div>
+                            <div class="skill-card">Tableau</div>
+                            <div class="skill-card">GitHub</div>
+                            <div class="skill-card">Excel</div>
                         </div>
                     </div>
                     
@@ -449,15 +448,15 @@
                     <div class="skills-category">
                         <h3>💻 Languages</h3>
                         <div class="skills-grid-inner">
-                            <div class="skill-card">Python</div>
-                            <div class="skill-card">R</div>
                             <div class="skill-card">SQL</div>
+                            <div class="skill-card">PostgreSQL</div>
                             <div class="skill-card">DBML</div>
+                            <div class="skill-card">Python</div>
+                            <div class="skill-card">Bash</div>
+                            <div class="skill-card">R</div>
                             <div class="skill-card">Java</div>
                             <div class="skill-card">JavaScript</div>
                             <div class="skill-card">HTML/CSS</div>
-                            <div class="skill-card">PostgreSQL</div>
-                            <div class="skill-card">Bash (Linux)</div>
                         </div>
                     </div>
                     
@@ -466,16 +465,12 @@
                         <h3>📚 Libraries & Frameworks</h3>
                         <div class="skills-grid-inner">
                             <div class="skill-card">Pandas</div>
-                            <div class="skill-card">Matplotlib</div>
                             <div class="skill-card">Flask</div>
-                            <div class="skill-card">TensorFlow</div>
-                            <div class="skill-card">Scikit-learn</div>
-                            <div class="skill-card">SciPy</div>
                             <div class="skill-card">XGBoost</div>
+                            <div class="skill-card">TensorFlow</div>
+                            <div class="skill-card">Matplotlib</div>
                             <div class="skill-card">Tidyverse</div>
                             <div class="skill-card">GGPlot2</div>
-
-
                         </div>
                     </div>
                 </div>
