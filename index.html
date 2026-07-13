@@ -26,6 +26,7 @@
         <section id="welcome">
             <div class="hero-content">
                 <h1>Hey,<br> I'm Jack.</h1>
+                <p class="hero-subtitle">Data analyst &amp; engineer — data modeling, ETL pipelines, and analytics.</p>
                 <div class="hero-image">
                     <img src="images/headshot.jpg" alt="Jack's headshot" />
                 </div>
@@ -68,6 +69,35 @@
                     </div>
                 </div>
 
+                <!-- 2026 Marker -->
+                <div class="timeline-item">
+                    <div class="year-marker">2026</div>
+                </div>
+
+                <!-- Chess Data Pipeline and Analysis -->
+                <div class="timeline-item left">
+                    <a href="https://github.com/Jack-H-Roberts/Chess-Analytics-Pipeline-and-Dashboard" target="_blank" rel="noopener noreferrer">
+                        <div class="timeline-content clickable">
+                            <div class="click-indicator">GitHub →</div>
+                            <div class="content-image">
+                                <img src="images/projects/ChessMatchAnalysis.png" alt="Chess Data Pipeline and Analysis">
+                            </div>
+                            <div class="content-title">Chess Data Pipeline and Analysis</div>
+                            <div class="content-subtitle">Personal Project</div>
+                            <div class="content-description">Rebuilt my 2024 chess analysis as a governed data pipeline. A scheduled ingestion service (AWS Lambda, EventBridge, S3) lands 3,500+ games of my match history from the Chess.com API as raw JSON for monthly incremental loads. Game- and move-level bronze/silver/gold Delta tables in Databricks — deduplicated, quality-checked, and orchestrated by a scheduled Lakeflow job with failure alerts — feed a Databricks SQL dashboard of Elo progression and win rates, plus an XGBoost win-prediction model rebuilt on the 48-feature gold layer.</div>
+                            <div class="content-date">Jul. 2026 – Present</div>
+                            <div class="skill-pills">
+                                <span class="skill-pill" data-skill="Python">Python</span>
+                                <span class="skill-pill" data-skill="SQL">SQL</span>
+                                <span class="skill-pill" data-skill="AWS">AWS</span>
+                                <span class="skill-pill" data-skill="Databricks">Databricks</span>
+                                <span class="skill-pill" data-skill="Delta Lake">Delta Lake</span>
+                                <span class="skill-pill" data-skill="XGBoost">XGBoost</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
                 <!-- 2025 Marker -->
                 <div class="timeline-item">
                     <div class="year-marker">2025</div>
@@ -81,7 +111,7 @@
                         </div>
                         <div class="content-title">Data Analyst</div>
                         <div class="content-subtitle">Shoals Technologies Group</div>
-                        <div class="content-description">Serve as data liaison on a company-wide systems modernization (CPQ, CRM, ERP), designing the future-state enterprise data model (100+ tables in DBML) and building the data-quality layer behind a new CPQ part-creation tool that saves ~40 staff-hours per week. Previously consolidated 7 internal and external datasets to size the company's market share — surfacing ~30% of the market ($100M/yr) it wasn't quoting — and presented the findings solo to the C-suite for ongoing use in quarterly earnings reports.</div>
+                        <div class="content-description">Serve as data liaison on a company-wide systems modernization (CPQ, CRM, ERP), designing the future-state enterprise data model (300+ tables, DBML) and a strictly typed, bitemporal PostgreSQL proof-of-concept that migrates a legacy ERP, Salesforce, and ungoverned spreadsheets into one governed source of truth. Own the data-quality and validation layer for a new CPQ part-creation tool (saving ~40 staff-hours per week) and drive the platform lifecycle end to end — requirements, hands-on validation, and triage of thousands of bugs and change requests. Previously engineered a SQL/Python pipeline consolidating 7 data sources into a market-share model that surfaced $100M/yr in unquoted addressable markets, solo-presented to the C-suite and handed off to finance for quarterly refreshes.</div>
                         <div class="content-date">April 2024 – Present</div>
                         <div class="skill-pills">
                             <span class="skill-pill" data-skill="SQL">SQL</span>
@@ -91,6 +121,7 @@
                             <span class="skill-pill" data-skill="Salesforce">Salesforce</span>
                             <span class="skill-pill" data-skill="Tableau">Tableau</span>
                             <span class="skill-pill" data-skill="Data Modeling">Data Modeling</span>
+                            <span class="skill-pill" data-skill="Data Quality">Data Quality</span>
                         </div>
                     </div>
                 </div>
@@ -152,18 +183,17 @@
                             <div class="content-title">Greenville Spotlight</div>
                             <div class="content-subtitle">Furman University</div>
                             <div class="content-description">
-                                Built a full-stack restaurant-discovery web app (Flask, SQLite) for CSC-342,
-                                serving restaurant and review data scraped from Google and Yelp with dynamic
-                                sorting and filtering.
+                                Built a full-stack restaurant-discovery web app (Flask, JavaScript) for CSC-342,
+                                serving Yelp API and curated menu data for 195 restaurants with dynamic search,
+                                filtering, and an interactive Leaflet map.
                             </div>
                             <div class="content-date">Jan 2024 – Apr 2024</div>
                             <div class="skill-pills">
                                 <span class="skill-pill" data-skill="HTML/CSS">HTML/CSS</span>
                                 <span class="skill-pill" data-skill="JavaScript">JavaScript</span>
                                 <span class="skill-pill" data-skill="Flask">Flask</span>
-                                <span class="skill-pill" data-skill="SQL">SQL</span>
-                                <span class="skill-pill" data-skill="SQLite">SQLite</span>
-                                <span class="skill-pill" data-skill="Web Scraping">Web Scraping</span>
+                                <span class="skill-pill" data-skill="Leaflet">Leaflet</span>
+                                <span class="skill-pill" data-skill="REST APIs">REST APIs</span>
                             </div>
                         </div>
                     </a>
@@ -201,10 +231,11 @@
                             <div class="content-title">Chess Match Analysis</div>
                             <div class="content-subtitle">Independent</div>
                             <div class="content-description">
-                                Engineered 40 features from 3500 personal chess games using 
-                                the Chess.com API to predict the outcomes of my games with 
-                                XGBoost. Identified loss-prone patterns and achieved a 15% 
-                                increase in my win percentage.
+                                Engineered 40 features from 3500 personal chess games using
+                                the Chess.com API to predict the outcomes of my games with
+                                XGBoost. Identified loss-prone patterns and achieved a 15%
+                                increase in my win percentage. Rebuilt in 2026 as an end-to-end
+                                AWS + Databricks pipeline — see Chess Data Pipeline and Analysis.
                             </div>
                             <div class="content-date">September 2024</div>
                             <div class="skill-pills">
@@ -225,7 +256,7 @@
                         </div>
                         <div class="content-title">Data Quality and Assembly Line Researcher</div>
                         <div class="content-subtitle">BMW Group</div>
-                        <div class="content-description">Uncovered discrepancies between 2 internal defect reporting datasets using statistical tests and launched a Flask-based website for forecasting assembly line bottlenecks in real-time to minimize downtime.</div>
+                        <div class="content-description">Uncovered discrepancies between 2 internal defect reporting datasets using statistical tests. Launched and maintained a production Flask-based internal website to forecast and monitor assembly line bottlenecks in real time, assisting managers in reallocating resources to minimize downtime.</div>
                         <div class="content-date">August 2024 - May 2025</div>
                         <div class="skill-pills">
                             <span class="skill-pill" data-skill="Flask">Flask</span>
@@ -409,6 +440,8 @@
                             <div class="skill-card">Excel</div>
                             <div class="skill-card">GitHub</div>
                             <div class="skill-card">Salesforce</div>
+                            <div class="skill-card">Databricks</div>
+                            <div class="skill-card">AWS</div>
                         </div>
                     </div>
                     
@@ -424,6 +457,7 @@
                             <div class="skill-card">JavaScript</div>
                             <div class="skill-card">HTML/CSS</div>
                             <div class="skill-card">PostgreSQL</div>
+                            <div class="skill-card">Bash (Linux)</div>
                         </div>
                     </div>
                     
@@ -452,8 +486,12 @@
                     <div class="skills-category skills-category-full-height">
                         <h3>⚡ Technical Experience</h3>
                         <div class="skills-grid-inner">
-                            <div class="skill-card">Exploratory Analysis</div>
                             <div class="skill-card">Data Pipelining</div>
+                            <div class="skill-card">Data Warehousing</div>
+                            <div class="skill-card">ETL Pipelines</div>
+                            <div class="skill-card">Data Modeling</div>
+                            <div class="skill-card">Root Cause Analysis</div>
+                            <div class="skill-card">Exploratory Analysis</div>
                             <div class="skill-card">Feature Selection</div>
                             <div class="skill-card">Model Selection</div>
                             <div class="skill-card">Linear Regression</div>
@@ -468,8 +506,6 @@
                             <div class="skill-card">Non-Technical Presentations</div>
                             <div class="skill-card">Requirements Gathering</div>
                             <div class="skill-card">Web Development</div>
-                            <div class="skill-card">Root Cause Analysis</div>
-                            <div class="skill-card">Data Warehousing</div>
                         </div>
                     </div>
                 </div>
