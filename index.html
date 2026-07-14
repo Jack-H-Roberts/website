@@ -98,7 +98,7 @@
                 </div>
 
                 <!-- Chess Data Pipeline and Analysis -->
-                <div class="timeline-item right">
+                <div class="timeline-item right" id="ChessDataPipeline">
                     <a href="https://github.com/Jack-H-Roberts/Chess-Analytics-Pipeline-and-Dashboard" target="_blank" rel="noopener noreferrer">
                         <div class="timeline-content clickable">
                             <div class="click-indicator">GitHub →</div>
@@ -107,7 +107,7 @@
                             </div>
                             <div class="content-title">Chess Data Pipeline and Analysis</div>
                             <div class="content-subtitle">Personal Project</div>
-                            <div class="content-description">Rebuilt my chess analysis as a governed pipeline: AWS ingestion of 3,500+ Chess.com games into Databricks bronze/silver/gold Delta tables feeding a dashboard and 48-feature XGBoost model.</div>
+                            <div class="content-description">Rebuilt my chess analysis as a governed pipeline: AWS ingestion of ~5,800 Chess.com games into Databricks bronze/silver/gold Delta tables feeding a dashboard and 48-feature XGBoost model.</div>
                             <div class="content-date">Jul. 2026 – Present</div>
                             <div class="skill-pills">
                                 <span class="skill-pill" data-skill="Databricks">Databricks</span>
@@ -222,30 +222,28 @@
 
                 <!-- Chess Match Analysis -->
                 <div class="timeline-item left">
-                    <a href="https://github.com/Jack-H-Roberts/ChessAnalytics" target="_blank" rel="noopener noreferrer">
-                        <div class="timeline-content clickable">
-                            <div class="click-indicator">GitHub →</div>
-                            <div class="content-image">
-                                <img src="images/projects/ChessMatchAnalysis.png" alt="Chess Match Analysis">
-                            </div>
-                            <div class="content-title">Chess Match Analysis</div>
-                            <div class="content-subtitle">Independent</div>
-                            <div class="content-description">
-                                Engineered 40 features from 3500 personal chess games using
-                                the Chess.com API to predict the outcomes of my games with
-                                XGBoost. Identified loss-prone patterns and achieved a 15%
-                                increase in my win percentage. Rebuilt in 2026 as an end-to-end
-                                AWS + Databricks pipeline — see Chess Data Pipeline and Analysis.
-                            </div>
-                            <div class="content-date">September 2024</div>
-                            <div class="skill-pills">
-                                <span class="skill-pill" data-skill="Python">Python</span>
-                                <span class="skill-pill" data-skill="Pandas">Pandas</span>
-                                <span class="skill-pill" data-skill="Matplotlib">Matplotlib</span>
-                                <span class="skill-pill" data-skill="XGBoost">XGBoost</span>
-                            </div>
+                    <div class="timeline-content clickable" onclick="window.open('https://github.com/Jack-H-Roberts/ChessAnalytics', '_blank', 'noopener')">
+                        <div class="click-indicator">GitHub →</div>
+                        <div class="content-image">
+                            <img src="images/projects/ChessMatchAnalysis.png" alt="Chess Match Analysis">
                         </div>
-                    </a>
+                        <div class="content-title">Chess Match Analysis</div>
+                        <div class="content-subtitle">Independent</div>
+                        <div class="content-description">
+                            Engineered 48 features from 3500 personal chess games using
+                            the Chess.com API to predict the outcomes of my games with
+                            XGBoost. Identified loss-prone patterns and achieved a 15%
+                            increase in my win percentage. Rebuilt in 2026 as an end-to-end
+                            AWS + Databricks pipeline — see <a href="#ChessDataPipeline" onclick="event.stopPropagation()">Chess Data Pipeline and Analysis</a>.
+                        </div>
+                        <div class="content-date">September 2024</div>
+                        <div class="skill-pills">
+                            <span class="skill-pill" data-skill="Python">Python</span>
+                            <span class="skill-pill" data-skill="Pandas">Pandas</span>
+                            <span class="skill-pill" data-skill="Matplotlib">Matplotlib</span>
+                            <span class="skill-pill" data-skill="XGBoost">XGBoost</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- BMW Research Position -->
@@ -532,7 +530,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Jack H. Roberts. Built with HTML, CSS, and JavaScript.</p>
+        <p>&copy; 2026 Jack H. Roberts. Built with HTML, CSS, and JavaScript.</p>
         <p>Code for the site can be found on <a href="https://github.com/Jack-H-Roberts/website" target="_blank" class="contact-link">GitHub</a>.</p>
     </footer>
 
